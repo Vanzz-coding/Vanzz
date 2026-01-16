@@ -177,3 +177,37 @@ select {
   font-weight: bold;
   box-shadow: 0 0 12px rgba(0,255,255,0.2);
 }
+
+.detail-box {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(0,255,200,0.15);
+  text-align: left;
+}
+
+.detail-box h3 {
+  color: #00ffd5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.detail-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-box ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.detail-box .note {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #ffb74d;
+  text-align: center;
+}
