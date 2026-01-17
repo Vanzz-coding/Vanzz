@@ -1165,3 +1165,16 @@ button {
   color: #00ffd5;
   text-shadow: 0 0 10px rgba(0, 255, 213, 0.5);
 }
+/* FORCE HAPUS WARNA GOLD */
+h1, h2, h3,
+.card h2,
+.card h3 {
+  color: #00ffd5 !important;
+  text-shadow: 0 0 12px rgba(0, 255, 213, 0.6) !important;
+}
+
+/* ICON ▶ JADI CYAN */
+.card h2::before,
+.card h3::before {
+  color: #00ffd5 !important;
+}
