@@ -850,3 +850,105 @@ button,
 :root {
   --gold: transparent !important;
 }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #061a18, #000 70%);
+  color: #eafdf9;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 255, 210, 0.18);
+}
+
+.nav div {
+  color: #9feee3;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav .active,
+.nav div:hover {
+  color: #2fffe3;
+  text-shadow: 0 0 8px rgba(47, 255, 227, 0.6);
+}
+
+/* TITLE */
+.title-glow-text {
+  text-align: center;
+  margin: 28px 0 24px;
+  font-size: 22px;
+  color: #2fffe3;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(47, 255, 227, 0.6);
+}
+
+/* PAYMENT LIST */
+.payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 16px;
+}
+
+/* PAYMENT ITEM */
+.payment-item {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid rgba(0, 255, 210, 0.22);
+
+  /* soft glow */
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 210, 0.06),
+    0 0 14px rgba(0, 255, 210, 0.18);
+
+  transition: 0.25s ease;
+}
+
+.payment-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 14px rgba(0, 255, 210, 0.12),
+    0 0 22px rgba(0, 255, 210, 0.35);
+}
+
+/* ICON COLOR SOFT */
+.payment-item span {
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .title-glow-text {
+    font-size: 20px;
+  }
+
+  .payment-item {
+    font-size: 14px;
+    padding: 13px 14px;
+  }
+}
