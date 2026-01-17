@@ -2351,3 +2351,29 @@ body {
   font-size: 14px;
   color: #9fffee;
 }
+#toast {
+  position: fixed;
+  top: 70px;              /* jarak dari atas */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#toast {
+  animation: toastIn 0.4s ease;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
