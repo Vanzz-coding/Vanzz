@@ -1918,3 +1918,11 @@ h2 {
   font-weight: bold;
   display: none;
    }
+
+.ring,
+.logo-ring,
+.logo-wrap::before,
+.logo-wrap::after {
+  animation: none !important;
+  transform: none !important;
+}
