@@ -264,6 +264,26 @@ h2{
   </div>
 
 </div>
+  <script>
+function copyText(text){
+  // Fallback aman (support Android lama)
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+  
+  document.body.appendChild(textarea);
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+
+  // Notifikasi
+  alert("SS BUKTI TF BRE");
+}
+  </script>
 <!-- MODAL QRIS FULLSCREEN -->
   <div class="qris-modal" id="qrisModal" onclick="closeQRIS()">
   <img
