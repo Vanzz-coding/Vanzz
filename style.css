@@ -2033,3 +2033,70 @@ h2 {
   color: #000;
   font-weight: bold;
 }
+.payment-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding:20px;
+}
+
+.pay-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 20px;
+  border-radius:22px;
+  background:linear-gradient(145deg,#041818,#0a2d2d);
+  border:1px solid rgba(0,255,213,.25);
+  box-shadow:0 10px 30px rgba(0,255,213,.12);
+  transition:.3s;
+}
+
+.pay-card:active{
+  transform:scale(.97);
+}
+
+.pay-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.pay-left img{
+  width:50px;
+  height:50px;
+  border-radius:14px;
+  background:#000;
+}
+
+.pay-left h4{
+  font-size:16px;
+  font-weight:700;
+  color:#eaffff;
+}
+
+.pay-left p{
+  font-size:12px;
+  color:#8fffe9;
+  margin-top:2px;
+}
+
+.pay-btn{
+  font-size:12px;
+  font-weight:700;
+  padding:7px 16px;
+  border-radius:20px;
+  color:#00ffd5;
+  border:1px solid rgba(0,255,213,.45);
+}
+
+.pay-btn.scan{
+  background:linear-gradient(135deg,#00ffd5,#00bfa5);
+  color:#003;
+  border:none;
+}
+
+/* KHUSUS QRIS */
+.pay-card.qris{
+  box-shadow:0 0 35px rgba(0,255,213,.35);
+}
