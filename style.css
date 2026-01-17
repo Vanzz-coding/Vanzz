@@ -352,3 +352,17 @@ select {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+body.gold .btn-green {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  box-shadow: 0 0 15px #ffd700;
+}
+
+body.gold .btn-red {
+  background: transparent;
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  box-shadow: 0 0 15px #ff4d4d;
+}
