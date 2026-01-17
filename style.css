@@ -1,4 +1,23 @@
-* {
+* :root {
+  --cyan: #00ffd5;
+  --cyan-soft: rgba(0,255,213,.35);
+  --cyan-strong: rgba(0,255,213,.9);
+
+  --gold: #ffb300;
+  --gold-soft: rgba(255,179,0,.35);
+  --gold-strong: rgba(255,179,0,.9);
+}
+
+.nav,
+.card,
+.product-card,
+.logo-ring,
+.btn-glow {
+  border: 1px solid var(--neon);
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+{
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
@@ -25,7 +44,8 @@ body {
   padding: 30px 20px;
 }
 .hero h1 {
-  color: orange;
+  color: var(--neon);
+  text-shadow: 0 0 15px var(--neon-soft);
 }
 
 /* LOGO */
@@ -210,4 +230,45 @@ select {
   font-size: 12px;
   color: #ffb74d;
   text-align: center;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 8px var(--neon-soft),
+      0 0 18px var(--neon-soft);
+  }
+  50% {
+    box-shadow:
+      0 0 18px var(--neon-strong),
+      0 0 40px var(--neon-soft);
+  }
+  100% {
+    box-shadow:
+      0 0 8px var(--neon-soft),
+      0 0 18px var(--neon-soft);
+  }
+}
+
+@keyframes spinGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo-ring {
+  animation: spinGlow 8s linear infinite, neonPulse 2.5s infinite;
+}
+
+.btn-glow {
+  background: linear-gradient(135deg, var(--neon), #000);
+  color: #000;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 25px var(--neon-strong),
+    0 0 50px var(--neon-soft);
 }
