@@ -1998,3 +1998,38 @@ h2 {
   color: #ffc400;
   font-weight: bold;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal-box img {
+  width: 250px;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.modal-box button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+}
