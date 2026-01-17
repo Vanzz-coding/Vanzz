@@ -3,58 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produk - VanzzMarket</title>
+  <title>Produk Vanzz</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="cyan">
 
 <nav class="nav">
-  <div onclick="location.href='index.html'">🏠 Home</div>
-  <div class="active">📦 Produk</div>
-  <div onclick="location.href='payment.html'">💳 Payment</div>
+  <div onclick="location.href='index.html'">Home</div>
+  <div class="active">Produk</div>
+  <div onclick="location.href='payment.html'">Payment</div>
 </nav>
 
-<h2 class="title glow-text">ALL LIST PRODUK<br>VANZZMRKT</h2>
+<h2 class="title glow-text">ALL LIST PRODUK BY VANZZMARKET</h2>
 
-<div class="product-card card slide-up">
+<div class="product-card slide-up">
   <span class="badge">🔥 TERLARIS</span>
 
-  <img src="https://files.catbox.moe/8zxsjf.jpg" alt="Pterodactyl">
+  <img src="https://files.catbox.moe/8zxsif.jpg" alt="Pterodactyl">
 
   <h3>PANEL PTERODACTYL</h3>
-  <p class="desc">
-    Panel Pterodactyl berkualitas tinggi dengan garansi permanen dan anti problem.
+  <p>
+    Panel Pterodactyl berkualitas tinggi dengan garansi permanen
+    dan anti problem.
   </p>
 
-  <label>Pilih Paket:</label>
+  <!-- PAKET PRODUK (SAMA PERSIS) -->
   <select id="paket">
-    <option value="1000">2GB - Rp 1.000</option>
-    <option value="2000">3GB - Rp 2.000</option>
-    <option value="3000">4GB - Rp 3.000</option>
-    <option value="4000">5GB - Rp 4.000</option>
-    <option value="5000">6GB - Rp 5.000</option>
-    <option value="6000">7GB - Rp 6.000</option>
-    <option value="7000">8GB - Rp 7.000</option>
-    <option value="8000">9GB - Rp 8.000</option>
-    <option value="9000">10GB - Rp 9.000</option>
-    <option value="10000">UNLIMITED - Rp 10.000</option>
+    <option value="5000">UNLIMITED - Rp 5.000</option>
+    <option value="8000">RESELLER - Rp 8.000</option>
+    <option value="10000">ADMIN PANEL - Rp 10.000</option>
+    <option value="15000">PARTNER - Rp 15.000</option>
+    <option value="20000">OWNER - Rp 20.000</option>
+    <option value="25000">TANGAN KANAN - Rp 25.000</option>
+    <option value="30000">DEV - Rp 30.000</option>
   </select>
 
-  <div class="benefit">
-    <p>✅ Anti delay</p>
-    <p>✅ Anti rusuh</p>
-    <p>✅ Ada harga ada kualitas</p>
-  </div>
-
-  <button class="btn-glow" onclick="openCart()">Tambah ke Keranjang</button>
+  <button class="btn-glow" onclick="openCart()">BUY</button>
 </div>
 
-<!-- CART -->
+<!-- KERANJANG -->
 <div class="cart-overlay" id="cart">
-  <div class="cart-box">
-    <h3>🛒 Keranjang Belanja</h3>
+  <div class="cart-box slide-cart">
+    <h3>Keranjang Belanja</h3>
     <p>PANEL PTERODACTYL</p>
+
     <strong>Total: Rp <span id="total">0</span></strong>
 
     <div class="cart-btn">
