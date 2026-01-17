@@ -6,7 +6,8 @@
 <title>Produk Vanzz</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="cyan">
 
 <nav class="nav">
   <div onclick="location.href='index.html'">🏠 Home</div>
@@ -14,33 +15,36 @@
   <div onclick="location.href='payment.html'">💳 Payment</div>
 </nav>
 
-<h2 class="title glow-text">ALL LIST PRODUK<br>VANZZMRKT</h2>
+<h2 class="title glow-text">ALL LIST PRODUK VANZZ</h2>
 
-<div class="product-card slide-up">
-  <span class="badge">🔥 TERLARIS</span>
+<div class="card product-card fade-in">
   <img src="https://files.catbox.moe/82xsif.jpg">
+
   <h3>PANEL PTERODACTYL</h3>
   <p>Panel Pterodactyl berkualitas tinggi dengan garansi permanen dan anti problem.</p>
 
-  <select id="paket">
+  <label><b>Pilih Paket:</b></label>
+  <select id="paket" onchange="updateHarga()">
     <option value="5000">UNLIMITED - Rp 5.000</option>
-    <option value="8000">RESSELER - Rp 8.000</option>
+    <option value="8000">RESELLER - Rp 8.000</option>
     <option value="10000">ADMIN PANEL - Rp 10.000</option>
-    <option value="15000">PARTNER- Rp 15.000</option>
+    <option value="15000">PARTNER - Rp 15.000</option>
     <option value="20000">OWNER - Rp 20.000</option>
     <option value="25000">TANGAN KANAN - Rp 25.000</option>
     <option value="30000">DEV - Rp 30.000</option>
   </select>
 
+  <p class="price">Total: <span id="total">Rp 5.000</span></p>
+
   <button class="btn-glow" onclick="openCart()">BUY</button>
 </div>
 
-<!-- KERANJANG SLIDE -->
+<!-- CART -->
 <div class="cart-overlay" id="cart">
-  <div class="cart-box slide-cart">
+  <div class="cart-box">
     <h3>🛒 Keranjang Belanja</h3>
     <p>PANEL PTERODACTYL</p>
-    <strong>Total: Rp <span id="total">0</span></strong>
+    <b>Total: <span id="cartTotal">Rp 5.000</span></b>
 
     <div class="cart-btn">
       <button class="btn-red" onclick="closeCart()">CANCEL</button>
@@ -48,7 +52,7 @@
     </div>
   </div>
 </div>
-  
+
 <script src="script.js"></script>
 </body>
-</ht
+</html>
