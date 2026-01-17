@@ -2166,3 +2166,145 @@ h2 {
   transform: scale(1.8);
   cursor: zoom-out;
 }
+/* =========================
+   GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #062e2b, #000);
+  color: #eaffff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px;
+  background: rgba(0, 30, 30, 0.9);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #7ffcff;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.nav-item.active {
+  opacity: 1;
+  background: linear-gradient(135deg, #00ffe7, #00b3ff);
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+/* =========================
+   PAYMENT CARD
+========================= */
+.pay-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 255, 255, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.pay-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pay-left img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #000;
+  padding: 6px;
+}
+
+.pay-left h4 {
+  font-size: 16px;
+  color: #7ffcff;
+}
+
+.pay-left p {
+  font-size: 13px;
+  color: #b6ffff;
+  opacity: 0.8;
+}
+
+/* =========================
+   BUTTON COPY / SCAN
+========================= */
+.pay-btn {
+  background: linear-gradient(135deg, #00ffe7, #00b3ff);
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.pay-btn.scan {
+  background: linear-gradient(135deg, #00ffd0, #00ffaa);
+}
+
+/* =========================
+   QRIS MODAL FULLSCREEN
+========================= */
+.qris-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.qris-full {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  transition: transform 0.25s ease;
+}
+
+/* ZOOM MODE */
+.qris-full.zoomed {
+  transform: scale(1.6);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .pay-left h4 {
+    font-size: 15px;
+  }
+
+  .pay-btn {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+   }
