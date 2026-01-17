@@ -221,10 +221,10 @@ h2{
 
   <div class="pay-card dana" onclick="copyText('089526430806')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/je0gi8.jpg">
+      <img src="https://files.catbox.moe/906jyh.jpg">
       <div>
         <h4>DANA</h4>
-        <p>0895 2643 0806</p>
+        <p>0895 6246 30806</p>
       </div>
     </div>
     <span class="pay-btn">COPY</span>
@@ -232,7 +232,7 @@ h2{
 
   <div class="pay-card shopee" onclick="copyText('08984514605')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/je0gi8.jpg">
+      <img src="https://files.catbox.moe/906jyh.jpg">
       <div>
         <h4>ShopeePay</h4>
         <p>0898 4514 605</p>
@@ -243,7 +243,7 @@ h2{
 
   <div class="pay-card gopay" onclick="copyText('08984514605')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/je0gi8.jpg">
+      <img src="https://files.catbox.moe/906jyh.jpg">
       <div>
         <h4>GoPay</h4>
         <p>0898 4514 605</p>
@@ -254,7 +254,7 @@ h2{
 
   <div class="pay-card qris" onclick="openQRIS()">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/je0gi8.jpg">
+      <img src="https://files.catbox.moe/ug8mma.jpg">
       <div>
         <h4>QRIS</h4>
         <p>Scan via e-wallet / m-banking</p>
@@ -265,35 +265,22 @@ h2{
 
 </div>
 <!-- MODAL QRIS -->
-<div class="modal" id="qrisModal">
-  <div class="modal-box">
-    <img src="https://files.catbox.moe/ojvxui.jpg">
+<div class="qris-modal" id="qrisModal">
+  <div class="qris-box">
+    <img src="https://files.catbox.moe/ojvxui.jpg" alt="QRIS">
     <button onclick="closeQRIS()">Tutup</button>
   </div>
 </div>
-
-<div class="toast" id="toast">Nomor berhasil di copy</div>
-
-<script>
-function copyText(text){
-  navigator.clipboard.writeText(text);
-  showToast();
-}
-
-function showToast(){
-  let t=document.getElementById("toast");
-  t.style.display="block";
-  setTimeout(()=>t.style.display="none",2000);
-}
-
+</script>
+  <script>
 function openQRIS(){
-  document.getElementById("qrisModal").style.display="flex";
+  document.getElementById("qrisModal").style.display = "flex";
 }
 
 function closeQRIS(){
-  document.getElementById("qrisModal").style.display="none";
+  document.getElementById("qrisModal").style.display = "none";
 }
-</script>
+  </script>
 
 </body>
 </html>
