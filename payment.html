@@ -264,26 +264,6 @@ h2{
   </div>
 
 </div>
-  <script>
-function copyText(text){
-  // Fallback aman (support Android lama)
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.setAttribute("readonly", "");
-  textarea.style.position = "absolute";
-  textarea.style.left = "-9999px";
-  
-  document.body.appendChild(textarea);
-  textarea.select();
-  textarea.setSelectionRange(0, 99999);
-
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-
-  // Notifikasi
-  alert("SS BUKTI TF BRE");
-}
-  </script>
 <!-- MODAL QRIS FULLSCREEN -->
   <div class="qris-modal" id="qrisModal" onclick="closeQRIS()">
   <img
@@ -316,6 +296,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<!-- TOAST COPY -->
+<div id="toast" class="toast">
+  <div class="toast-box">
+    <div class="toast-icon">✅</div>
+    <div class="toast-text">
+      <div class="toast-title">Nomor berhasil disalin:</div>
+      <div id="toastNumber" class="toast-number"></div>
+      <div class="toast-sub">Kirim bukti transfer ke admin</div>
+    </div>
+  </div>
+</div>
+  <script>
+function copyText(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
 
+  document.getElementById("toastNumber").innerText = text;
+  const toast = document.getElementById("toast");
+  toast.style.display = "flex";
+
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 2500);
+}
+  </script>
 </body>
 </html>
