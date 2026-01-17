@@ -1723,3 +1723,39 @@ body {
   color:#00ffd5;
   text-shadow:0 0 8px #00ffd5;
 }
+/* ===== NAVBAR PAYMENT ===== */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:center; /* INI YANG BIKIN TENGAH */
+  align-items:center;
+  gap:26px;
+  padding:14px 0;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #00ffd555;
+}
+
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;
+  font-weight:600;
+  color:#9fffee;
+  text-decoration:none;
+  opacity:.7;
+  transition:.3s;
+}
+
+.nav-item:hover{
+  opacity:1;
+  color:#00ffd5;
+}
+
+.nav-item.active{
+  color:#00ffd5;
+  text-shadow:0 0 10px #00ffd5;
+}
