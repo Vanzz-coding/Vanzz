@@ -808,3 +808,45 @@ button,
   color: #00ffd5 !important;
   text-shadow: 0 0 12px rgba(0,255,213,.6) !important;
 }
+/* ===============================
+   KILL GOLD AURA - TOTAL
+   =============================== */
+
+/* Matikan SEMUA shadow lama */
+*,
+*::before,
+*::after {
+  filter: none !important;
+}
+
+/* Override semua box-shadow kuning/orange */
+* {
+  box-shadow: 0 0 0 transparent !important;
+}
+
+/* Re-apply glow CYAN only */
+.glow,
+.card,
+.product-card,
+.hero-logo img,
+.logo img,
+button,
+.btn {
+  box-shadow:
+    0 0 10px rgba(0,255,213,.4),
+    0 0 25px rgba(0,255,213,.6) !important;
+  border-color: #00ffd5 !important;
+}
+
+/* Hilangkan gradient emas */
+*[style*="yellow"],
+*[style*="gold"],
+*[style*="#ff"],
+*[style*="orange"] {
+  background: transparent !important;
+}
+
+/* Pastikan tidak ada warna emas sama sekali */
+:root {
+  --gold: transparent !important;
+}
