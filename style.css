@@ -2377,3 +2377,75 @@ body {
     transform: translate(-50%, 0);
   }
 }
+/* TOAST CONTAINER */
+.toast {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: none;
+}
+
+/* BOX */
+.toast-box {
+  min-width: 280px;
+  max-width: 90vw;
+  padding: 22px 26px;
+  border-radius: 18px;
+
+  background: radial-gradient(
+    circle at top,
+    #0d2b27,
+    #050b0b
+  );
+
+  border: 2px solid #18ffd8;
+
+  box-shadow:
+    0 0 25px rgba(24,255,216,.45),
+    inset 0 0 20px rgba(24,255,216,.15);
+
+  text-align: center;
+  color: #18ffd8;
+
+  animation: toastShow .4s ease;
+}
+
+/* TITLE */
+.toast-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* NUMBER */
+.toast-number {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 8px 0 10px;
+  color: #2cffdf;
+}
+
+/* SUB */
+.toast-sub {
+  font-size: 14px;
+  opacity: .85;
+}
+
+/* ANIMATION */
+@keyframes toastShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
