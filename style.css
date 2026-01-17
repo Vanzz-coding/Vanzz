@@ -463,3 +463,41 @@ select {
     transform: scale(0.97);
   }
 }
+
+/* === NAVBAR EMOJI PREMIUM === */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 10px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,200,0.3);
+}
+
+.nav-item {
+  color: #bbb;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 8px #00ffd5;
+}
+
+.nav-item.active {
+  color: #00ffd5;
+  text-shadow: 0 0 10px #00ffd5;
+}
+
+/* MOBILE MAKIN RAPI */
+@media (max-width: 480px) {
+  .nav-item {
+    font-size: 14px;
+  }
+}
