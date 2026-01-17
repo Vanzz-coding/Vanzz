@@ -1,52 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Vanzz Official</title>
+
+<style>
+:root{
+  --cyan:#00ffd5;
+  --dark:#05080b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,#0b1a1a,#000);
+  color:#fff;
+  min-height:100vh;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  padding:30px 0;
+  text-align:center;
+}
+
+.nav a{
+  color:var(--cyan);
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
+}
+
+/* LOGO + RING */
+.logo-wrap{
+  position:relative;
+  width:130px;
+  height:130px;
+  margin:20px auto;
+}
+
+.ring{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  border:2px solid var(--cyan);
+  animation:spin 6s linear infinite;
+}
+
+.ring.inner{
+  inset:12px;
+  opacity:.4;
+}
+
+.logo-wrap img{
+  width:100%;
+  border-radius:50%;
+  z-index:2;
+  position:relative;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg);}
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin:20px 0;
+}
+
+.title h1{
+  color:var(--cyan);
+}
+
+.title h2{
+  font-size:14px;
+  opacity:.7;
+}
+
+/* PAYMENT LIST */
+.payment-list{
+  max-width:360px;
+  margin:30px auto;
+  padding:0 15px;
+}
+
+.payment-box{
+  background:linear-gradient(180deg,#0b1215,#05080b);
+  border:1px solid #00ffd555;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  cursor:pointer;
+  box-shadow:0 0 20px #00ffd522;
+}
+
+.payment-box:hover{
+  box-shadow:0 0 25px #00ffd588;
+}
+
+.payment-icon{
+  font-size:22px;
+  color:var(--cyan);
+}
+
+.payment-text{
+  font-weight:bold;
+}
+
+/* MODAL QRIS */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  background:#05080b;
+  border:1px solid var(--cyan);
+  border-radius:18px;
+  padding:20px;
+  width:90%;
+  max-width:320px;
+  text-align:center;
+  box-shadow:0 0 30px #00ffd599;
+}
+
+.modal-box h3{
+  color:var(--cyan);
+}
+
+.modal-box img{
+  width:100%;
+  border-radius:12px;
+  margin:15px 0;
+}
+
+.modal-box button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:12px;
+  border:none;
+  background:var(--cyan);
+  font-weight:bold;
+}
+
+.modal-box .close{
+  background:transparent;
+  color:#aaa;
+  border:1px solid #333;
+}
+</style>
+</head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="nav">
-  <div onclick="location.href='index.html'">🏠 Home</div>
-  <div onclick="location.href='produk.html'">📦 Produk</div>
-  <div class="active">💳 Payment</div>
-</nav>
+<!-- NAV -->
+<div class="nav">
+  <a href="index.html">🏠 Home</a>
+  <a href="produk.html">🛍 Produk</a>
+  <a href="kontak.html">👤 Kontak</a>
+</div>
 
-<!-- LOGO + RING -->
-<div class="logo-ring-wrap">
-  <div class="ring ring-outer"></div>
-  <div class="ring ring-inner"></div>
-  <img src="https://files.catbox.moe/8j51ju.jpg" class="logo-img">
+<!-- LOGO -->
+<div class="logo-wrap">
+  <div class="ring"></div>
+  <div class="ring inner"></div>
+  <img src="https://files.catbox.moe/8j5lju.jpg" alt="Vanzz Logo">
 </div>
 
 <!-- TITLE -->
-<div class="payment-title">
+<div class="title">
   <h1>PAYMENT VANZZ</h1>
   <h2>OFFICIAL</h2>
-  <span class="neon-line"></span>
 </div>
 
-<!-- DESKRIPSI -->
-<p class="payment-desc">
-  Silakan pilih metode pembayaran yang tersedia di bawah ini.
-</p>
-
-<!-- LIST PAYMENT -->
+<!-- PAYMENT -->
 <div class="payment-list">
 
-  <div class="payment-item" onclick="copyText('0895624630806')">
-    💙 <span>DANA</span>
-    <small>0895624630806</small>
+  <div class="payment-box" onclick="copyText('0895624630806')">
+    <div class="payment-icon">🔰</div>
+    <div class="payment-text">DANA</div>
   </div>
 
-  <div class="payment-item" onclick="copyText('08984514605')">
-    💚 <span>GOPAY</span>
-    <small>08984514605</small>
+  <div class="payment-box" onclick="copyText('08984514605')">
+    <div class="payment-icon">🔰</div>
+    <div class="payment-text">SHOPEEPAY</div>
   </div>
 
-  <div class="payment-item" onclick="copyText('08984514605')">
-    🧡 <span>SHOPEEPAY</span>
-    <small>08984514605</small>
+  <div class="payment-box" onclick="copyText('08984514605')">
+    <div class="payment-icon">🔰</div>
+    <div class="payment-text">GOPAY</div>
   </div>
 
-  <div class="payment-item qris" onclick="openQRIS()">
-    📱 <span>QRIS</span>
-    <small>ALL PAYMENT</small>
+  <div class="payment-box" onclick="openQRIS()">
+    <div class="payment-icon">🔰</div>
+    <div class="payment-text">QRIS</div>
   </div>
 
 </div>
@@ -55,23 +225,26 @@
 <div id="qrisModal" class="modal">
   <div class="modal-box">
     <h3>Scan QRIS</h3>
-    <img src="https://files.catbox.moe/jvxui.jpg">
-    <button onclick="closeQRIS()">Tutup</button>
+    <img src="qris.jpg" alt="QRIS">
+    <button onclick="copyText('0895624630806')">📋 Copy Nomor</button>
+    <button class="close" onclick="closeQRIS()">Tutup</button>
   </div>
 </div>
 
-<!-- SCRIPT -->
 <script>
 function copyText(text){
   navigator.clipboard.writeText(text);
-  alert("Nomor berhasil disalin");
+  alert("Nomor berhasil di copy");
 }
+
 function openQRIS(){
   document.getElementById("qrisModal").classList.add("show");
 }
+
 function closeQRIS(){
   document.getElementById("qrisModal").classList.remove("show");
 }
 </script>
 
 </body>
+</html>
