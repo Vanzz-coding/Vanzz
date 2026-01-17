@@ -5,8 +5,9 @@ function formatRupiah(angka) {
 function openCart() {
   const select = document.getElementById("paket");
   const price = parseInt(select.value);
+
   document.getElementById("total").innerText = formatRupiah(price);
-  document.getElementById("cart").style.display = "block";
+  document.getElementById("cart").style.display = "flex";
 }
 
 function closeCart() {
@@ -14,20 +15,23 @@ function closeCart() {
 }
 
 function sendWhatsApp() {
-  const phone = "628984514605"; // GANTI NOMOR KAMU
+  const phone = "628984514605"; // GANTI NOMOR ADMIN
   const select = document.getElementById("paket");
+
   const paketText = select.options[select.selectedIndex].text;
   const harga = parseInt(select.value);
 
+  const produk = "PANEL PTERODACTYL";
+
   const message = `
 Halo Admin 👋
+
 Saya ingin order produk:
+📦 Produk : ${produk}
+📋 Paket  : ${paketText}
+💰 Harga  : Rp ${formatRupiah(harga)}
 
-📦 Produk: PANEL PTERODACTYL
-📋 Paket: ${paketText}
-💰 Harga: Rp ${formatRupiah(harga)}
-
-Terima kasih 🙏
+Mohon diproses ya 🙏
 `;
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
