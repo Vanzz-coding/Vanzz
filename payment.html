@@ -2,54 +2,63 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <title>Pembayaran</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment | Vanzz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div onclick="location.href='index.html'">🏠 Home</div>
-    <div onclick="location.href='produk.html'">📦 Produk</div>
-    <div class="active">💳 Payment</div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="nav">
+  <div onclick="location.href='index.html'">🏠 Home</div>
+  <div onclick="location.href='produk.html'">📦 Produk</div>
+  <div class="active">💳 Payment</div>
+</nav>
 
-  <h2 class="title-glow-text">METODE PEMBAYARAN</h2>
+<!-- JUDUL -->
+<h2 class="title-glow-text" style="text-align:center;">
+  METODE PEMBAYARAN
+</h2>
 
-  <div class="payment-list">
+<p style="text-align:center;color:#bdbdbd;margin-bottom:25px;">
+  Silakan pilih metode pembayaran yang tersedia di bawah ini.
+</p>
 
-    <div class="payment-item" onclick="copyText('0895624630806')">
-      💙 <span>DANA</span>
-      <small>0895624630806</small>
-    </div>
+<!-- LIST PEMBAYARAN -->
+<div class="payment-list">
 
-    <div class="payment-item" onclick="copyText('08984514605')">
-      💚 <span>GOPAY</span>
-      <small>08984514605</small>
-    </div>
-
-    <div class="payment-item" onclick="copyText('08984514605')">
-      🧡 <span>SHOPEEPAY</span>
-      <small>08984514605</small>
-    </div>
-
-    <div class="payment-item qris" onclick="openQRIS()">
-      📱 <span>QRIS</span>
-      <small>ALL PAYMENT</small>
-    </div>
-
+  <div class="payment-item" onclick="copyText('0895624630806')">
+    💙 <span>DANA</span>
+    <small>0895624630806</small>
   </div>
 
-  <!-- QRIS MODAL -->
-  <div id="qrisModal" class="modal">
-    <div class="modal-box">
-      <h3>Scan QRIS</h3>
-      <img src="https://files.catbox.moe/ojvxui.jpg" alt="QRIS">
-      <button onclick="closeQRIS()">Tutup</button>
-    </div>
+  <div class="payment-item" onclick="copyText('08984514605')">
+    💚 <span>GOPAY</span>
+    <small>08984514605</small>
   </div>
 
+  <div class="payment-item" onclick="copyText('08984514605')">
+    🧡 <span>SHOPEEPAY</span>
+    <small>08984514605</small>
+  </div>
+
+  <div class="payment-item qris" onclick="openQRIS()">
+    📱 <span>QRIS</span>
+    <small>ALL PAYMENT</small>
+  </div>
+
+</div>
+
+<!-- QRIS MODAL -->
+<div id="qrisModal" class="modal">
+  <div class="modal-box">
+    <h3>Scan QRIS</h3>
+    <img src="https://files.catbox.moe/jvxui.jpg" alt="QRIS">
+    <button onclick="closeQRIS()">Tutup</button>
+  </div>
+</div>
+
+<!-- SCRIPT -->
 <script>
 function copyText(text) {
   navigator.clipboard.writeText(text);
