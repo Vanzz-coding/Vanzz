@@ -1719,3 +1719,203 @@ body {
   background: linear-gradient(135deg,#00ffe7,#00b3ff);
   color: #000;
 }
+/* =====================
+   RESET & ROOT
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+  --bg: #050b0f;
+  --card: rgba(0, 255, 213, 0.08);
+  --cyan: #00ffe1;
+  --cyan-soft: rgba(0, 255, 225, 0.35);
+  --text: #e9fefe;
+}
+
+/* =====================
+   BODY
+===================== */
+body {
+  background: radial-gradient(circle at top, #082a2a, #020608);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 14px 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cyan-soft);
+}
+
+.nav-item {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--cyan-soft);
+  color: #001616;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.logo-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid var(--cyan);
+  animation: spin 8s linear infinite;
+  filter: drop-shadow(0 0 15px var(--cyan));
+}
+
+.logo-wrap img {
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+h1 {
+  margin-top: 20px;
+  color: var(--cyan);
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =====================
+   PAYMENT LIST
+===================== */
+.payment {
+  max-width: 420px;
+  margin: auto;
+  padding: 10px;
+}
+
+.pay-item {
+  background: var(--card);
+  border: 1px solid var(--cyan-soft);
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-item:hover {
+  box-shadow: 0 0 18px var(--cyan-soft);
+  transform: scale(1.02);
+}
+
+.pay-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pay-left img {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.pay-item span {
+  font-weight: 600;
+}
+
+/* =====================
+   MODAL QRIS
+===================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #020d0d;
+  border: 1px solid var(--cyan);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.modal-box img {
+  max-width: 260px;
+  border-radius: 12px;
+}
+
+.modal-box button {
+  margin-top: 14px;
+  background: var(--cyan);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =====================
+   TOAST
+===================== */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cyan);
+  color: #001616;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: none;
+   }
