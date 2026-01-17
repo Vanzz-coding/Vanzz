@@ -181,6 +181,28 @@ body {
   }
   }
 
+.slide-up {
+  animation: slideUp .6s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+body.gold .btn-green {
+  background: transparent !important;
+  border: 2px solid #ffd700 !important;
+  color: #ffd700 !important;
+  box-shadow: 0 0 15px #ffd700 !important;
+}
+
+body.gold .btn-red {
+  background: transparent !important;
+  border: 2px solid #ff4d4d !important;
+  color: #ff4d4d !important;
+  box-shadow: 0 0 15px #ff4d4d !important;
+}
 :root {
   --cyan: #00ffd5;
   --cyan-soft: rgba(0,255,213,.35);
@@ -278,7 +300,7 @@ select {
   border-radius: 10px;
   background: #000;
   color: #fff;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--cyan);
   margin-bottom: 14px;
 }
 
@@ -351,18 +373,4 @@ select {
 @keyframes slideUp {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
-
-body.gold .btn-green {
-  background: transparent !important;
-  border: 2px solid #ffd700 !important;
-  color: #ffd700 !important;
-  box-shadow: 0 0 15px #ffd700 !important;
-}
-
-body.gold .btn-red {
-  background: transparent !important;
-  border: 2px solid #ff4d4d !important;
-  color: #ff4d4d !important;
-  box-shadow: 0 0 15px #ff4d4d !important;
-}
+   }
