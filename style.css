@@ -762,3 +762,49 @@ select {
   height: 2px;
   background: linear-gradient(90deg, transparent, #00ffd5, transparent);
 }
+/* ===============================
+   FORCE REMOVE GOLD (TOTAL)
+   =============================== */
+
+* {
+  --gold: #00ffd5 !important;
+}
+
+/* Border Gold */
+[style*="gold"],
+[style*="#FFD700"],
+[style*="#f5c542"],
+[style*="yellow"] {
+  border-color: #00ffd5 !important;
+  color: #00ffd5 !important;
+  box-shadow: 0 0 20px rgba(0,255,213,.6) !important;
+}
+
+/* Ring Foto / Logo */
+.hero-logo img,
+.profile img,
+.logo img {
+  border-color: #00ffd5 !important;
+  box-shadow: 0 0 30px rgba(0,255,213,.7) !important;
+}
+
+/* Card Gold */
+.card,
+.product-card {
+  border-color: rgba(0,255,213,.4) !important;
+  box-shadow: 0 0 25px rgba(0,255,213,.25) !important;
+}
+
+/* Button Gold */
+button,
+.btn {
+  border-color: #00ffd5 !important;
+  box-shadow: 0 0 18px rgba(0,255,213,.6) !important;
+}
+
+/* Text Gold */
+.gold,
+.text-gold {
+  color: #00ffd5 !important;
+  text-shadow: 0 0 12px rgba(0,255,213,.6) !important;
+}
