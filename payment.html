@@ -32,22 +32,36 @@ body{
 }
 
 /* NAVBAR */
-.nav{
-  position:relative;
-  z-index:10;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  padding:14px 0;
-  background:rgba(0,0,0,.6);
-  backdrop-filter:blur(8px);
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 14px;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(8px);
 }
 
-.nav a{
-  color:var(--cyan);
-  text-decoration:none;
-  font-weight:bold;
-  font-size:15px;
+.nav-item{
+  color: #7ffcff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: .3s;
+}
+
+.nav-item:hover{
+  background: rgba(0,255,255,.15);
+}
+
+.nav-item.active{
+  background: linear-gradient(135deg,#00ffe7,#00b3ff);
+  color: #000;
+}
 }
 
 /* HEADER */
@@ -205,7 +219,7 @@ h2{
 
   <div class="pay-item" onclick="copyText('089526430806')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/fdia7y.jpg">
+      <img src="https://files.catbox.moe/je0gi8.jpg">
       <span>DANA</span>
     </div>
     <span>Tap Copy</span>
@@ -213,7 +227,7 @@ h2{
 
   <div class="pay-item" onclick="copyText('08984514605')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/f2l9ae.jpg">
+      <img src="https://files.catbox.moe/je0gi8.jpg">
       <span>SHOPEEPAY</span>
     </div>
     <span>Tap Copy</span>
@@ -221,7 +235,7 @@ h2{
 
   <div class="pay-item" onclick="copyText('08984514605')">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/xkbp5h.jpg">
+      <img src="https://files.catbox.moe/je0gi8.jpg">
       <span>GOPAY</span>
     </div>
     <span>Tap Copy</span>
@@ -229,7 +243,7 @@ h2{
 
   <div class="pay-item" onclick="openQRIS()">
     <div class="pay-left">
-      <img src="https://files.catbox.moe/j6z53z.jpg">
+      <img src="https://files.catbox.moe/je0gi8.jpg">
       <span>QRIS</span>
     </div>
     <span>Scan</span>
