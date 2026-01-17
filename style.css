@@ -1926,3 +1926,75 @@ h2 {
   animation: none !important;
   transform: none !important;
 }
+/* HERO PRODUK */
+.product-hero {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.product-hero h1,
+.product-hero h2 {
+  color: #00ffd5;
+  text-shadow: 0 0 15px rgba(0, 255, 213, 0.6);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.product-hero h1 {
+  font-size: 32px;
+}
+
+.product-hero h2 {
+  font-size: 26px;
+  margin-top: 6px;
+}
+
+.product-hero .line {
+  width: 90px;
+  height: 4px;
+  background: #ffc400;
+  margin: 18px auto;
+  border-radius: 5px;
+}
+
+.product-hero p {
+  color: #bdbdbd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* LIST PRODUK */
+.product-list {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #141414;
+  border: 1px solid rgba(0,255,213,0.4);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,255,213,0.15);
+}
+
+.product-card h3 {
+  color: #00ffd5;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.product-card .price {
+  display: block;
+  margin-top: 12px;
+  color: #ffc400;
+  font-weight: bold;
+}
