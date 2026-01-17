@@ -354,15 +354,15 @@ select {
 }
 
 body.gold .btn-green {
-  background: transparent;
-  border: 2px solid #ffd700;
-  color: #ffd700;
-  box-shadow: 0 0 15px #ffd700;
+  background: transparent !important;
+  border: 2px solid #ffd700 !important;
+  color: #ffd700 !important;
+  box-shadow: 0 0 15px #ffd700 !important;
 }
 
 body.gold .btn-red {
-  background: transparent;
-  border: 2px solid #ff4d4d;
-  color: #ff4d4d;
-  box-shadow: 0 0 15px #ff4d4d;
+  background: transparent !important;
+  border: 2px solid #ff4d4d !important;
+  color: #ff4d4d !important;
+  box-shadow: 0 0 15px #ff4d4d !important;
 }
