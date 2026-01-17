@@ -1456,3 +1456,96 @@ p {
     height: 130px;
   }
 }
+/* LOGO RING */
+.logo-ring-wrap{
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 20px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 3;
+  background: #000;
+}
+
+/* RING BASE */
+.ring{
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+/* OUTER RING */
+.ring-outer{
+  width: 160px;
+  height: 160px;
+  border-color: #00ffd5;
+  box-shadow:
+    0 0 15px rgba(0,255,213,.9),
+    0 0 35px rgba(0,255,213,.6);
+}
+
+/* INNER RING */
+.ring-inner{
+  width: 135px;
+  height: 135px;
+  border-color: #00e6c3;
+  box-shadow:
+    0 0 12px rgba(0,230,195,.9),
+    0 0 25px rgba(0,230,195,.6);
+}
+
+/* TITLE */
+.payment-title{
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.payment-title h1{
+  color:#00ffd5;
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin:0;
+  text-shadow:
+    0 0 10px rgba(0,255,213,.9),
+    0 0 25px rgba(0,255,213,.6);
+}
+
+.payment-title h2{
+  color:#00ffd5;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin:6px 0 14px;
+  text-shadow:
+    0 0 8px rgba(0,255,213,.9);
+}
+
+.neon-line{
+  display:block;
+  width:160px;
+  height:3px;
+  margin:0 auto;
+  background:linear-gradient(90deg,transparent,#00ffd5,transparent);
+  box-shadow:0 0 12px rgba(0,255,213,.9);
+  border-radius:10px;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .logo-ring-wrap{
+    width:140px;
+    height:140px;
+  }
+  .ring-outer{ width:140px;height:140px; }
+  .ring-inner{ width:120px;height:120px; }
+  .logo-img{ width:80px;height:80px; }
+}
