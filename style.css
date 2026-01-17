@@ -549,3 +549,21 @@ select {
     font-size: 14px;
   }
 }
+/* MENU NORMAL */
+.nav-item {
+  color: #9aa3a8; /* abu elegan */
+}
+
+/* MENU AKTIF */
+.nav-item.active {
+  color: #00ffd5;
+  text-shadow: 0 0 10px rgba(0,255,213,.8);
+}
+
+.nav-item.active::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffd5, transparent);
+}
