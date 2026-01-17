@@ -8,62 +8,61 @@
 <style>
 :root{
   --cyan:#00ffd5;
-  --dark:#05080b;
+  --dark:#050b0b;
+  --card:#0b1a1a;
 }
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-  background:radial-gradient(circle at top,#0b1a1a,#000);
+  background:radial-gradient(circle at top,#0b2a2a,#000);
   color:#fff;
   min-height:100vh;
 }
 
-/* NAV */
+/* NAVBAR */
 .nav{
+  position:relative;
+  z-index:10;
   display:flex;
-  justify-content:center;   /* TENGAH */
-  align-items:center;
-  gap:26px;
+  justify-content:center;
+  gap:20px;
   padding:14px 0;
-  text-align:center;
-}
-}
-
-.nav{
-  display:flex;
-  flex-direction:column;   /* ❌ INI PENYEBABNYA */
-  gap:18px;
-  padding:30px 0;
-  text-align:center;
-}
-}
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(8px);
 }
 
-/* LOGO + RING */
+.nav a{
+  color:var(--cyan);
+  text-decoration:none;
+  font-weight:bold;
+  font-size:15px;
+}
+
+/* HEADER */
+.header{
+  margin-top:30px;
+  text-align:center;
+}
+
 .logo-wrap{
   position:relative;
-  width:130px;
-  height:130px;
-  margin:20px auto;
+  width:220px;
+  height:220px;
+  margin:0 auto;
 }
 
 .ring{
   position:absolute;
   inset:0;
   border-radius:50%;
-  border:2px solid var(--cyan);
+  border:3px solid var(--cyan);
   animation:spin 6s linear infinite;
-}
-
-.ring.inner{
-  inset:12px;
-  opacity:.4;
 }
 
 .logo-wrap img{
@@ -74,54 +73,55 @@ body{
 }
 
 @keyframes spin{
-  to{transform:rotate(360deg);}
+  to{transform:rotate(360deg)}
 }
 
-/* TITLE */
-.title{
-  text-align:center;
-  margin:20px 0;
-}
-
-.title h1{
+h1{
+  margin-top:20px;
   color:var(--cyan);
+  font-size:28px;
 }
 
-.title h2{
+h2{
   font-size:14px;
   opacity:.7;
 }
 
 /* PAYMENT LIST */
-.payment-list{
-  max-width:360px;
+.payment{
+  max-width:420px;
   margin:30px auto;
   padding:0 15px;
 }
 
-.payment-box{
-  background:linear-gradient(180deg,#0b1215,#05080b);
-  border:1px solid #00ffd555;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:18px;
+.pay-item{
+  background:var(--card);
+  border:1px solid rgba(0,255,213,.3);
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:15px;
   display:flex;
   align-items:center;
-  gap:14px;
+  justify-content:space-between;
   cursor:pointer;
-  box-shadow:0 0 20px #00ffd522;
+  transition:.3s;
 }
 
-.payment-box:hover{
-  box-shadow:0 0 25px #00ffd588;
+.pay-item:hover{
+  box-shadow:0 0 20px rgba(0,255,213,.4);
 }
 
-.payment-icon{
-  font-size:22px;
-  color:var(--cyan);
+.pay-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-.payment-text{
+.pay-left img{
+  width:34px;
+}
+
+.pay-item span{
   font-weight:bold;
 }
 
@@ -129,52 +129,48 @@ body{
 .modal{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.85);
+  background:rgba(0,0,0,.7);
   display:none;
-  justify-content:center;
   align-items:center;
-  z-index:999;
-}
-
-.modal.show{
-  display:flex;
+  justify-content:center;
+  z-index:99;
 }
 
 .modal-box{
-  background:#05080b;
-  border:1px solid var(--cyan);
-  border-radius:18px;
+  background:#081818;
   padding:20px;
+  border-radius:18px;
+  text-align:center;
   width:90%;
   max-width:320px;
-  text-align:center;
-  box-shadow:0 0 30px #00ffd599;
-}
-
-.modal-box h3{
-  color:var(--cyan);
 }
 
 .modal-box img{
   width:100%;
   border-radius:12px;
-  margin:15px 0;
+  margin-bottom:15px;
 }
 
 .modal-box button{
-  width:100%;
-  padding:12px;
-  margin-top:10px;
-  border-radius:12px;
-  border:none;
   background:var(--cyan);
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
   font-weight:bold;
+  cursor:pointer;
 }
 
-.modal-box .close{
-  background:transparent;
-  color:#aaa;
-  border:1px solid #333;
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--cyan);
+  color:#000;
+  padding:10px 16px;
+  border-radius:12px;
+  display:none;
+  font-weight:bold;
 }
 </style>
 </head>
@@ -182,72 +178,87 @@ body{
 <body>
 
 <!-- NAV -->
-<nav class="navbar">
-  <a href="index.html" class="nav-item">🏠 Home</a>
-  <a href="produk.html" class="nav-item">📦 Produk</a>
-  <a href="payment.html" class="nav-item active">💳 Payment</a>
-</nav>
-
-<!-- LOGO -->
-<div class="logo-wrap">
-  <div class="ring"></div>
-  <div class="ring inner"></div>
-  <img src="https://files.catbox.moe/8j5lju.jpg" alt="Vanzz Logo">
+<div class="nav">
+  <a href="/">🏠 Home</a>
+  <a href="/produk.html">📦 Produk</a>
+  <a href="/payment.html">💳 Payment</a>
 </div>
 
-<!-- TITLE -->
-<div class="title">
+<!-- HEADER -->
+<div class="header">
+  <div class="logo-wrap">
+    <div class="ring"></div>
+    <img src="logo.jpg" alt="Vanzz">
+  </div>
   <h1>PAYMENT VANZZ</h1>
   <h2>OFFICIAL</h2>
 </div>
 
 <!-- PAYMENT -->
-<div class="payment-list">
+<div class="payment">
 
-  <div class="payment-box" onclick="copyText('0895624630806')">
-    <div class="payment-icon">🔰</div>
-    <div class="payment-text">DANA</div>
+  <div class="pay-item" onclick="copyText('089526430806')">
+    <div class="pay-left">
+      <img src="dana.png">
+      <span>DANA</span>
+    </div>
+    <span>Tap Copy</span>
   </div>
 
-  <div class="payment-box" onclick="copyText('08984514605')">
-    <div class="payment-icon">🔰</div>
-    <div class="payment-text">SHOPEEPAY</div>
+  <div class="pay-item" onclick="copyText('08984514605')">
+    <div class="pay-left">
+      <img src="shopee.png">
+      <span>SHOPEEPAY</span>
+    </div>
+    <span>Tap Copy</span>
   </div>
 
-  <div class="payment-box" onclick="copyText('08984514605')">
-    <div class="payment-icon">🔰</div>
-    <div class="payment-text">GOPAY</div>
+  <div class="pay-item" onclick="copyText('08984514605')">
+    <div class="pay-left">
+      <img src="gopay.png">
+      <span>GOPAY</span>
+    </div>
+    <span>Tap Copy</span>
   </div>
 
-  <div class="payment-box" onclick="openQRIS()">
-    <div class="payment-icon">🔰</div>
-    <div class="payment-text">QRIS</div>
+  <div class="pay-item" onclick="openQRIS()">
+    <div class="pay-left">
+      <img src="https://files.catbox.moe/j6z53z.jpg">
+      <span>QRIS</span>
+    </div>
+    <span>Scan</span>
   </div>
 
 </div>
 
 <!-- MODAL QRIS -->
-<div id="qrisModal" class="modal">
+<div class="modal" id="qrisModal">
   <div class="modal-box">
-    <h3>Scan QRIS</h3>
-    <img src="qris.jpg" alt="QRIS">
-    <button onclick="copyText('0895624630806')">📋 Copy Nomor</button>
-    <button class="close" onclick="closeQRIS()">Tutup</button>
+    <img src="https://files.catbox.moe/ojvxui.jpg">
+    <button onclick="closeQRIS()">Tutup</button>
   </div>
 </div>
+
+<div class="toast" id="toast">Nomor berhasil di copy</div>
 
 <script>
 function copyText(text){
   navigator.clipboard.writeText(text);
-  alert("Nomor berhasil di copy");
+  showToast();
+}
+
+function showToast(){
+  let t=document.getElementById("toast");
+  t.style.display="block";
+  setTimeout(()=>t.style.display="none",2000);
 }
 
 function openQRIS(){
-  document.getElementById("qrisModal").classList.add("show");
+  document.getElementById("qrisModal").style.display="flex";
 }
 
 function closeQRIS(){
-  document.getElementById("qrisModal").classList.remove("show");
+  document.getElementById("qrisModal").style.display="none";
 }
 </script>
 
