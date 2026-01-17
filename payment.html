@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Pembayaran</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
 <!-- NAVBAR -->
@@ -15,20 +7,11 @@
   <div class="active">💳 Payment</div>
 </nav>
 
-  <body>
-
-
-
-<!-- 🔽 BARU LIST PAYMENT -->
-<div class="payment-list">
-</div>
-
-  </body>
 <!-- LOGO + RING -->
 <div class="logo-ring-wrap">
   <div class="ring ring-outer"></div>
   <div class="ring ring-inner"></div>
-  <img src="https://files.catbox.moe/8j5lju.jpg" class="logo-img">
+  <img src="https://files.catbox.moe/8j51ju.jpg" class="logo-img">
 </div>
 
 <!-- TITLE -->
@@ -44,15 +27,6 @@
 </p>
 
 <!-- LIST PAYMENT -->
-<div class="payment-list">
-  ...
-</div>
-<!-- JUDUL -->
-<p style="text-align:center;color:#bdbdbd;margin-bottom:25px;">
-  Silakan pilih metode pembayaran yang tersedia di bawah ini.
-</p>
-
-<!-- LIST PEMBAYARAN -->
 <div class="payment-list">
 
   <div class="payment-item" onclick="copyText('0895624630806')">
@@ -77,31 +51,27 @@
 
 </div>
 
-<!-- QRIS MODAL -->
+<!-- MODAL QRIS -->
 <div id="qrisModal" class="modal">
   <div class="modal-box">
     <h3>Scan QRIS</h3>
-    <img src="https://files.catbox.moe/jvxui.jpg" alt="QRIS">
+    <img src="https://files.catbox.moe/jvxui.jpg">
     <button onclick="closeQRIS()">Tutup</button>
   </div>
 </div>
 
-
 <!-- SCRIPT -->
 <script>
-function copyText(text) {
+function copyText(text){
   navigator.clipboard.writeText(text);
   alert("Nomor berhasil disalin");
 }
-
-function openQRIS() {
+function openQRIS(){
   document.getElementById("qrisModal").classList.add("show");
 }
-
-function closeQRIS() {
+function closeQRIS(){
   document.getElementById("qrisModal").classList.remove("show");
 }
 </script>
 
 </body>
-</html>
