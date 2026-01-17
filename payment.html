@@ -264,23 +264,38 @@ h2{
   </div>
 
 </div>
-<!-- MODAL QRIS -->
-<div class="qris-modal" id="qrisModal">
-  <div class="qris-box">
-    <img src="https://files.catbox.moe/ojvxui.jpg" alt="QRIS">
-    <button onclick="closeQRIS()">Tutup</button>
+<!-- MODAL QRIS FULLSCREEN -->
+  <div class="qris-modal" id="qrisModal" onclick="closeQRIS()">
+  <img
+    src="https://files.catbox.moe/ojvxui.jpg"
+    class="qris-full"
+    onclick="event.stopPropagation()"
+    alt="QRIS">
   </div>
-</div>
-</script>
-  <script>
+<script>
 function openQRIS(){
   document.getElementById("qrisModal").style.display = "flex";
+  document.body.style.overflow = "hidden";
 }
 
 function closeQRIS(){
   document.getElementById("qrisModal").style.display = "none";
+  document.body.style.overflow = "auto";
+
+  const img = document.querySelector(".qris-full");
+  img.classList.remove("zoomed");
 }
-  </script>
+
+/* DOUBLE TAP / CLICK ZOOM */
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.querySelector(".qris-full");
+
+  img.addEventListener("click", (e) => {
+    e.stopPropagation();
+    img.classList.toggle("zoomed");
+  });
+});
+</script>
 
 </body>
 </html>
