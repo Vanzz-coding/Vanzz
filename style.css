@@ -1384,3 +1384,75 @@ p {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 255, 213, 0.7);
    }
+/* LOGO RING PREMIUM */
+.logoring{
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO */
+.logoring img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #000;
+  z-index: 3;
+}
+
+/* RING BASE */
+.logoring .ring{
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* OUTER RING */
+.logoring .outer{
+  inset: -10px;
+  border: 2px solid #00ffd5;
+  box-shadow:
+    0 0 18px rgba(0,255,213,.9),
+    0 0 45px rgba(0,255,213,.6),
+    0 0 80px rgba(0,255,213,.3);
+}
+
+/* INNER RING */
+.logoring .inner{
+  inset: -4px;
+  border: 2px solid #6afff1;
+  box-shadow:
+    0 0 12px rgba(106,255,241,.9),
+    0 0 30px rgba(106,255,241,.5);
+}
+
+/* OPTIONAL ANIMATION (PREMIUM) */
+.logoring .outer{
+  animation: spin 18s linear infinite;
+}
+.logoring .inner{
+  animation: spinReverse 12s linear infinite;
+}
+
+@keyframes spin{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+@keyframes spinReverse{
+  from{ transform: rotate(360deg); }
+  to{ transform: rotate(0deg); }
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .logoring{
+    width: 130px;
+    height: 130px;
+  }
+}
