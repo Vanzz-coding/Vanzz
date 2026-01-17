@@ -1161,3 +1161,7 @@ button {
 
   transition: all 0.3s ease;
 }
+.card h2 {
+  color: #00ffd5;
+  text-shadow: 0 0 10px rgba(0, 255, 213, 0.5);
+}
