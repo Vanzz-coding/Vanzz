@@ -1107,3 +1107,40 @@ body {
 .footer {
   margin-top: auto;
 }
+.card {
+  background: #1e1e1e;
+  border-radius: 18px;
+  padding: 22px;
+  margin: 20px 0;
+  border: 1px solid rgba(255, 165, 0, 0.4);
+}
+
+.card h2 {
+  color: #ffa500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.btn-glow {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #ff9800, #ffb300);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 18px rgba(255, 152, 0, 0.5);
+  transition: 0.3s;
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(255, 152, 0, 0.8);
+   }
