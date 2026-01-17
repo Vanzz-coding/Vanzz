@@ -1,3 +1,198 @@
+/* ===============================
+   VANZZMARKET STYLE.CSS
+   NO GOLD • CYAN PREMIUM
+   =============================== */
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0f14, #000);
+  color: #e5e5e5;
+}
+
+/* ===== ROOT COLOR ===== */
+:root {
+  --accent: #00ffd5;
+  --accent-soft: rgba(0,255,213,.25);
+  --accent-glow: rgba(0,255,213,.6);
+  --bg-card: rgba(15,18,22,.9);
+  --text-muted: #9aa3a8;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 10px;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--accent-soft);
+}
+
+.nav div {
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav div.active {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.nav div:hover {
+  color: var(--accent);
+}
+
+/* ===== TITLE ===== */
+.title-glow-text {
+  margin: 30px 15px 20px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ===== HERO LOGO ===== */
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.hero-logo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 25px var(--accent-glow);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  border: 1px solid var(--accent-soft);
+  padding: 22px;
+  margin: 20px 15px;
+  box-shadow: 0 0 20px rgba(0,255,213,.15);
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  margin-top: 18px;
+  padding: 14px;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--accent-glow);
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 15px;
+  border: 1px solid var(--accent-soft);
+  box-shadow: 0 0 25px rgba(0,255,213,.2);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.product-card h4 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ===== SELECT ===== */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  background: #000;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+/* ===== PAYMENT LIST ===== */
+.payment-list {
+  margin: 20px 15px;
+}
+
+.payment-item {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent-soft);
+  box-shadow: 0 0 15px rgba(0,255,213,.2);
+  font-size: 14px;
+}
+
+/* ===== FOOTER SPACE ===== */
+.space {
+  height: 80px;
+}
+
+/* ===== FORCE REMOVE GOLD (ANTI BALIK) ===== */
+.gold,
+.text-gold,
+.border-gold {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 15px var(--accent-glow) !important;
+   }
+
 /* ================================
    NEON CYAN / GOLD PREMIUM THEME
    Author: Vanzz
