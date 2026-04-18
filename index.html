@@ -9,46 +9,54 @@
 <body>
 
 <header class="nav">
-  <h1>VANX PANEL</h1>
+  <div class="logo">VANX PANEL</div>
+  <a href="#pricing" class="nav-btn">Order</a>
 </header>
 
 <section class="hero">
-  <h2>Panel Murah & Cepat ⚡</h2>
-  <p>Fast respon • Server stabil • Harga pelajar</p>
+  <h1>Panel Murah & Stabil ⚡</h1>
+  <p>Deploy cepat • Anti lemot • Harga pelajar</p>
+  <a href="#pricing" class="cta">Lihat Paket</a>
 </section>
 
-<section class="pricing">
+<section class="features">
+  <div>⚡ Server Cepat</div>
+  <div>🔒 Anti Suspend</div>
+  <div>📱 Support 24 Jam</div>
+</section>
 
-<!-- 1GB - 7GB -->
-<div class="box" onclick="pilih('1GB','1000')"><h2>1GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('2GB','1000')"><h2>2GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('3GB','1000')"><h2>3GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('4GB','1000')"><h2>4GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('5GB','1000')"><h2>5GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('6GB','1000')"><h2>6GB</h2><p class="price">Rp1.000</p></div>
-<div class="box" onclick="pilih('7GB','1000')"><h2>7GB</h2><p class="price">Rp1.000</p></div>
+<section id="pricing" class="pricing">
+
+<!-- 1-7 -->
+<div class="box" onclick="pilih('1GB','1000')"><h3>1GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('2GB','1000')"><h3>2GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('3GB','1000')"><h3>3GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('4GB','1000')"><h3>4GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('5GB','1000')"><h3>5GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('6GB','1000')"><h3>6GB</h3><p>Rp1K</p></div>
+<div class="box" onclick="pilih('7GB','1000')"><h3>7GB</h3><p>Rp1K</p></div>
 
 <!-- 8-10 -->
-<div class="box" onclick="pilih('8GB','2000')"><h2>8GB</h2><p class="price">Rp2.000</p></div>
-<div class="box" onclick="pilih('9GB','3000')"><h2>9GB</h2><p class="price">Rp3.000</p></div>
-<div class="box" onclick="pilih('10GB','4000')"><h2>10GB</h2><p class="price">Rp4.000</p></div>
+<div class="box mid" onclick="pilih('8GB','2000')"><h3>8GB</h3><p>Rp2K</p></div>
+<div class="box mid" onclick="pilih('9GB','3000')"><h3>9GB</h3><p>Rp3K</p></div>
+<div class="box mid" onclick="pilih('10GB','4000')"><h3>10GB</h3><p>Rp4K</p></div>
 
 <!-- UNLI -->
 <div class="box best" onclick="pilih('UNLI','5000')">
-  <div class="tag">BEST</div>
-  <h2>UNLI</h2>
-  <p class="price">Rp5.000</p>
+  <span class="badge">BEST</span>
+  <h3>UNLI</h3>
+  <p>Rp5K</p>
 </div>
 
 </section>
 
 <section class="form" id="form">
-  <h2>Form Order</h2>
+  <h2>Order Sekarang</h2>
   <input id="nama" placeholder="Nama">
-  <input id="wa" placeholder="Nomor WhatsApp">
+  <input id="wa" placeholder="WhatsApp">
   <input id="paket" readonly placeholder="Paket">
   <input id="harga" readonly placeholder="Harga">
-  <button onclick="kirim()">Order Sekarang</button>
+  <button onclick="kirim()">Order via WhatsApp</button>
 </section>
 
 <div id="toast"></div>
