@@ -150,3 +150,16 @@ button:active{
   font-weight:600;
   padding:25px;
 }
+
+#resList .ram-box{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* efek glow tetap */
+#resList .ram-box.active{
+  background: linear-gradient(135deg,#2563eb,#4f46e5);
+  box-shadow:0 0 25px rgba(59,130,246,0.8);
+}
