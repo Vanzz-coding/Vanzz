@@ -1,6 +1,6 @@
 let pilih = { paket:"1GB", harga:"1000" }
 
-// PILIH RAM
+// pilih panel
 document.querySelectorAll(".ram-box").forEach(el=>{
   el.onclick = () => {
     document.querySelectorAll(".ram-box").forEach(x=>x.classList.remove("active"))
@@ -11,30 +11,34 @@ document.querySelectorAll(".ram-box").forEach(el=>{
   }
 })
 
-// BUAT INVOICE
+// buat invoice
 function buatInvoice(){
   let id = "INV"+Math.floor(Math.random()*999999)
 
-  document.getElementById("invoiceBox").style.display="block"
+  invoiceBox.style.display="block"
 
-  document.getElementById("invId").innerText=id
-  document.getElementById("invPaket").innerText=pilih.paket
-  document.getElementById("invHarga").innerText="Rp "+pilih.harga
+  invId.innerText = id
+  invPaket.innerText = pilih.paket
+  invHarga.innerText = "Rp "+pilih.harga
 
   window.scrollTo(0,document.body.scrollHeight)
 }
 
-// KIRIM BUKTI
-function kirimBukti(){
-  let admin="6285695344508"
+// fake auto
+function selesaiBayar(){
+  let user = "user" + Math.floor(Math.random()*9999)
+  let pass = "pw" + Math.floor(Math.random()*99999)
 
-  let text=`Bukti Transfer
+  loginBox.style.display="block"
 
-ID: ${invId.innerText}
-Paket: ${invPaket.innerText}
-Harga: ${invHarga.innerText}
+  logUser.innerText = user
+  logPass.innerText = pass
+}
 
-Saya sudah transfer`
+// RESELLER KE TELEGRAM
+function beliReseller(){
+  let username = "VanxxPanel" // ganti
+  let text = "PERMISI BG MAU JOIN RESS PANEL"
 
-  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
+  window.open(`https://t.me/${username}?text=${encodeURIComponent(text)}`)
 }
