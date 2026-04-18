@@ -1,26 +1,59 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Inter, sans-serif;
   background: #020617;
   color: white;
 }
 
+/* NAV */
 .nav {
-  text-align: center;
-  padding: 15px;
-  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(15,23,42,0.7);
+  backdrop-filter: blur(10px);
 }
 
+.logo {font-weight: bold;}
+.nav-btn {
+  background: #22c55e;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
 .hero {
   text-align: center;
-  margin-top: 20px;
+  padding: 60px 20px;
 }
 
+.cta {
+  display: inline-block;
+  margin-top: 10px;
+  background: #22c55e;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+/* PRICING */
 .pricing {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
   gap: 10px;
-  margin: 20px;
+  padding: 20px;
 }
 
 .box {
@@ -29,7 +62,7 @@ body {
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .box:hover {
@@ -37,32 +70,30 @@ body {
   box-shadow: 0 0 15px #22c55e;
 }
 
+.mid {background:#334155;}
+
 .best {
   border: 2px solid #22c55e;
 }
 
-.tag {
+.badge {
+  font-size: 10px;
   background: #22c55e;
-  color: black;
   padding: 3px;
   border-radius: 5px;
-  font-size: 12px;
 }
 
-.price {
-  margin: 5px 0;
-}
-
+/* FORM */
 .form {
   text-align: center;
-  margin-top: 20px;
+  padding: 30px;
 }
 
 input {
   display: block;
-  margin: 8px auto;
+  margin: 10px auto;
   padding: 10px;
-  width: 200px;
+  width: 220px;
 }
 
 button {
@@ -72,20 +103,13 @@ button {
   color: white;
 }
 
-#toast {
+/* POPUP */
+#toast, #live {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
   background: #22c55e;
   padding: 10px;
   display: none;
 }
 
-#live {
-  position: fixed;
-  bottom: 70px;
-  left: 20px;
-  background: #1e293b;
-  padding: 8px;
-  display: none;
-}
+#toast {bottom:20px; right:20px;}
+#live {bottom:70px; left:20px; background:#1e293b;}
