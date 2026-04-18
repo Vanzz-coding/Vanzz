@@ -8,55 +8,51 @@
 </head>
 <body>
 
-<header class="navbar">
-  <h1>VANX PANEL</h1>
+<header class="nav">
+  <div class="logo">VANX PANEL</div>
 </header>
 
-<section class="hero fade">
-  <h2>Beli Panel Murah ⚡</h2>
-  <p>Fast respon • Harga pelajar • Server stabil</p>
+<section class="hero">
+  <h1>Panel Murah & Cepat ⚡</h1>
+  <p>Deploy cepat • Server stabil • Harga pelajar</p>
 </section>
 
-<section class="container fade">
+<section class="pricing">
 
-  <div class="card" onclick="pilih('1GB','1000')">
-    <h3>1GB</h3>
-    <p>Rp1.000</p>
-    <button>Beli</button>
+  <div class="box" onclick="pilih('1GB','1000')">
+    <h2>1GB</h2>
+    <p class="price">Rp1.000</p>
+    <button>Pilih</button>
   </div>
 
-  <div class="card" onclick="pilih('2GB','2000')">
-    <h3>2GB</h3>
-    <p>Rp2.000</p>
-    <button>Beli</button>
+  <div class="box" onclick="pilih('2GB','2000')">
+    <h2>2GB</h2>
+    <p class="price">Rp2.000</p>
+    <button>Pilih</button>
   </div>
 
-  <div class="card best" onclick="pilih('UNLI','5000')">
-    <span class="badge">BEST</span>
-    <h3>UNLI</h3>
-    <p>Rp5.000</p>
-    <button>Beli</button>
+  <div class="box best" onclick="pilih('UNLI','5000')">
+    <div class="tag">BEST</div>
+    <h2>UNLI</h2>
+    <p class="price">Rp5.000</p>
+    <button>Pilih</button>
   </div>
 
 </section>
 
-<section class="form fade" id="form">
-  <h2>Form Order</h2>
+<section class="form" id="form">
+  <h2>Detail Order</h2>
 
-  <input type="text" id="nama" placeholder="Nama">
-  <input type="text" id="wa" placeholder="Nomor WhatsApp">
-  <input type="text" id="paket" readonly placeholder="Paket">
-  <input type="text" id="harga" readonly placeholder="Harga">
+  <input id="nama" placeholder="Nama">
+  <input id="wa" placeholder="Nomor WhatsApp">
+  <input id="paket" readonly placeholder="Paket">
+  <input id="harga" readonly placeholder="Harga">
 
   <button onclick="kirim()">Order Sekarang</button>
 </section>
 
-<div id="popup" class="popup"></div>
+<div id="toast"></div>
 
-<footer>
-  <p>© VANX PANEL</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
