@@ -16,7 +16,7 @@
 
   <div class="ram" id="ramList">
 
-    <!-- 1-7 = 1K -->
+    <!-- 1-7 -->
     <div class="ram-box active" data-p="1GB" data-h="1000">1GB<br>Rp1.000</div>
     <div class="ram-box" data-p="2GB" data-h="1000">2GB<br>Rp1.000</div>
     <div class="ram-box" data-p="3GB" data-h="1000">3GB<br>Rp1.000</div>
@@ -35,16 +35,24 @@
 
   </div>
 
-  <button onclick="buatInvoice()">🛒 Beli Sekarang</button>
+  <button onclick="buatInvoice()">🛒 Beli Panel</button>
+</div>
+
+<!-- RESELLER -->
+<div class="panel">
+  <h2>Reseller Panel</h2>
+  <p>Harga: Rp10.000</p>
+
+  <button onclick="beliReseller()">💼 Beli Reseller</button>
 </div>
 
 <!-- INVOICE -->
 <div class="invoice" id="invoiceBox">
 
-  <h2>🧾 Invoice Pembayaran</h2>
+  <h2>🧾 Invoice</h2>
 
   <div class="inv-card">
-    <p>ID Transaksi</p>
+    <p>ID</p>
     <h3 id="invId">-</h3>
 
     <p>Paket</p>
@@ -56,13 +64,24 @@
 
   <img src="qris.png" class="qris">
 
-  <p class="note">Scan QRIS lalu transfer sesuai nominal</p>
+  <p class="note">Scan QRIS lalu bayar</p>
 
-  <button onclick="kirimBukti()">📤 Kirim Bukti Transfer</button>
+  <button onclick="selesaiBayar()">✅ Saya Sudah Bayar</button>
 
 </div>
 
-<div id="toast"></div>
+<!-- LOGIN -->
+<div class="login" id="loginBox">
+  <h2>🎉 Panel Berhasil Dibuat</h2>
+
+  <p>Username</p>
+  <h3 id="logUser">-</h3>
+
+  <p>Password</p>
+  <h3 id="logPass">-</h3>
+
+  <small>Login: https://panelmu.com</small>
+</div>
 
 <script src="script.js"></script>
 </body>
