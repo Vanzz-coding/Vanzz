@@ -11,7 +11,7 @@ document.querySelectorAll(".ram-box").forEach(el=>{
   }
 })
 
-// buat invoice
+// invoice
 function buatInvoice(){
   let id = "INV"+Math.floor(Math.random()*999999)
 
@@ -24,21 +24,31 @@ function buatInvoice(){
   window.scrollTo(0,document.body.scrollHeight)
 }
 
-// fake auto
-function selesaiBayar(){
-  let user = "user" + Math.floor(Math.random()*9999)
-  let pass = "pw" + Math.floor(Math.random()*99999)
-
-  loginBox.style.display="block"
-
-  logUser.innerText = user
-  logPass.innerText = pass
+// zoom QR
+function zoomQR(){
+  document.getElementById("qrisModal").style.display="flex"
 }
 
-// RESELLER KE TELEGRAM
-function beliReseller(){
-  let username = "VanxxPanel" // ganti
-  let text = "PERMISI BG MAU JOIN RESS PANEL"
+function closeQR(){
+  document.getElementById("qrisModal").style.display="none"
+}
 
-  window.open(`https://t.me/${username}?text=${encodeURIComponent(text)}`)
+// kirim bukti WA
+function kirimBukti(){
+  let admin="6285695344508"
+
+  let text=`Halo admin, saya sudah transfer
+
+ID: ${invId.innerText}
+Paket: ${invPaket.innerText}
+Harga: ${invHarga.innerText}`
+
+  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
+}
+
+// reseller telegram
+function beliReseller(){
+  let username="VanxxPanel"
+
+  window.open(`https://t.me/${username}`)
 }
