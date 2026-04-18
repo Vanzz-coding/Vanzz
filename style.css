@@ -144,3 +144,9 @@ button:active{
   border-radius:10px;
   display:none;
   }
+
+#resList .ram-box{
+  font-size:16px;
+  font-weight:600;
+  padding:25px;
+}
