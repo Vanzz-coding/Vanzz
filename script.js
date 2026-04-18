@@ -1,19 +1,28 @@
+// ambil referral
 const params = new URLSearchParams(window.location.search)
 const reff = params.get("reffid") || "-"
 
+// pilih paket
 function pilih(paket, harga) {
-  paketInput.value = paket
-  hargaInput.value = "Rp " + harga
-  form.scrollIntoView({ behavior: "smooth" })
+  document.getElementById("paket").value = paket
+  document.getElementById("harga").value = "Rp " + harga
+  document.getElementById("form").scrollIntoView({ behavior: "smooth" })
+
+  toast("Paket dipilih: " + paket)
 }
 
+// popup toast
 function toast(msg) {
   let t = document.getElementById("toast")
   t.innerText = msg
   t.style.display = "block"
-  setTimeout(() => t.style.display = "none", 2500)
+
+  setTimeout(() => {
+    t.style.display = "none"
+  }, 2500)
 }
 
+// kirim ke WA
 function kirim() {
   let nama = document.getElementById("nama").value
   let wa = document.getElementById("wa").value
@@ -21,21 +30,21 @@ function kirim() {
   let harga = document.getElementById("harga").value
 
   if (!nama || !wa || !paket) {
-    toast("Isi semua data!")
+    toast("Isi semua data dulu!")
     return
   }
 
   toast("Mengalihkan ke WhatsApp...")
 
-  let admin = "6285695344508"
+  let admin = "6285695344508" // GANTI NOMOR KAMU
 
   let pesan = `Halo Admin, saya ingin order panel
 
 Nama: ${nama}
-WA: ${wa}
+No WA: ${wa}
 Paket: ${paket}
 Harga: ${harga}
-Reff: ${reff}`
+Referral: ${reff}`
 
   setTimeout(() => {
     window.open(`https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`)
