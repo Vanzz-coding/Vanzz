@@ -1,9 +1,9 @@
 const reff = new URLSearchParams(location.search).get("reffid") || "-"
+document.getElementById("reff").innerText = reff
 
-function pilih(paket, harga){
-  paket.value = paket
-  harga.value = "Rp "+harga
-  form.scrollIntoView()
+function pilih(paket,harga){
+  paketInput.value = paket
+  hargaInput.value = "Rp "+harga
   toast("Pilih "+paket)
 }
 
@@ -15,31 +15,19 @@ function toast(msg){
 }
 
 function kirim(){
-  let nama=document.getElementById("nama").value
-  let wa=document.getElementById("wa").value
-  let paket=document.getElementById("paket").value
-  let harga=document.getElementById("harga").value
-
-  if(!nama||!wa||!paket){toast("Isi semua!");return}
+  let nama=nama.value
+  let wa=wa.value
+  let paket=paketInput.value
+  let harga=hargaInput.value
 
   let admin="6285695344508"
 
-  let teks=`Order Panel
+  let text=`Order Panel
 Nama:${nama}
 WA:${wa}
 Paket:${paket}
 Harga:${harga}
 Reff:${reff}`
 
-  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(teks)}`)
+  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
 }
-
-// live fake
-setInterval(()=>{
-  let l=document.getElementById("live")
-  let n=["Rizky","Dimas","Fajar"][Math.random()*3|0]
-  let g=Math.floor(Math.random()*10)+1
-  l.innerText=`${n} beli ${g}GB`
-  l.style.display="block"
-  setTimeout(()=>l.style.display="none",3000)
-},5000)
