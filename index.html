@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Panel Store</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,68 +20,59 @@
 
 <!-- REF -->
 <div class="ref">
-  🎁 Kode referral: <b id="reff">-</b><br>
-  <small>Terimakasih telah berpartisipasi</small>
+  🎁 Referral: <b id="reff">-</b>
 </div>
 
 <!-- FITUR -->
 <h2 class="title">👑 Kenapa Pilih Kami?</h2>
 
 <div class="fitur">
-  <div class="card">⚡<br><b>Anti Delay</b><br><small>Server stabil</small></div>
-  <div class="card">🛡️<br><b>Aman</b><br><small>Anti colong</small></div>
-  <div class="card">💾<br><b>Server Pribadi</b><br><small>Bukan shared</small></div>
-  <div class="card">💻<br><b>Full Support</b><br><small>Node.js</small></div>
+  <div class="card">⚡<br>Anti Delay</div>
+  <div class="card">🛡️<br>Aman</div>
+  <div class="card">💾<br>Server Pribadi</div>
+  <div class="card">💻<br>Full Support</div>
 </div>
 
 <!-- PANEL -->
 <div class="panel">
-
   <div class="panel-header">
     <span class="pop">🔥 POPULAR</span>
     <h2>Panel RAM Options</h2>
     <h1>Rp 1.000</h1>
-    <p>Mulai dari</p>
   </div>
 
-  <div class="ram">
+  <div class="ram" id="ramList">
+    <div class="ram-box" data-p="1GB" data-h="1000">1GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="2GB" data-h="1000">2GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="3GB" data-h="1000">3GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="4GB" data-h="1000">4GB<br>Rp1.000</div>
+    <div class="ram-box active" data-p="5GB" data-h="1000">5GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="6GB" data-h="1000">6GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="7GB" data-h="1000">7GB<br>Rp1.000</div>
 
-    <!-- 1-7 -->
-    <div class="ram-box" onclick="pilih(this,'1GB','1000')">1GB<br>Rp1.000</div>
-    <div class="ram-box" onclick="pilih(this,'2GB','1000')">2GB<br>Rp1.000</div>
-    <div class="ram-box" onclick="pilih(this,'3GB','1000')">3GB<br>Rp1.000</div>
-    <div class="ram-box" onclick="pilih(this,'4GB','1000')">4GB<br>Rp1.000</div>
-    <div class="ram-box active" onclick="pilih(this,'5GB','1000')">5GB<br>Rp1.000</div>
-    <div class="ram-box" onclick="pilih(this,'6GB','1000')">6GB<br>Rp1.000</div>
-    <div class="ram-box" onclick="pilih(this,'7GB','1000')">7GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="8GB" data-h="2000">8GB<br>Rp2.000</div>
+    <div class="ram-box" data-p="9GB" data-h="3000">9GB<br>Rp3.000</div>
+    <div class="ram-box" data-p="10GB" data-h="4000">10GB<br>Rp4.000</div>
 
-    <!-- 8-10 -->
-    <div class="ram-box" onclick="pilih(this,'8GB','2000')">8GB<br>Rp2.000</div>
-    <div class="ram-box" onclick="pilih(this,'9GB','3000')">9GB<br>Rp3.000</div>
-    <div class="ram-box" onclick="pilih(this,'10GB','4000')">10GB<br>Rp4.000</div>
-
-    <!-- UNLI -->
-    <div class="ram-box unli" onclick="pilih(this,'UNLI','5000')">UNLI<br>Rp5.000</div>
-
+    <div class="ram-box unli" data-p="UNLI" data-h="5000">UNLI<br>Rp5.000</div>
   </div>
 
-  <ul class="list">
-    <li>✔ Anti lag & anti limit</li>
-    <li>✔ Cocok bot berat</li>
-    <li>✔ Aktif 30 hari</li>
-    <li>✔ Support Node.js</li>
-  </ul>
-
-  <button onclick="kirim()">🛒 Beli Sekarang</button>
-
+  <button onclick="kirimPanel()">🛒 Beli Panel</button>
 </div>
 
-<!-- FORM -->
-<div class="form" id="form">
-  <input id="nama" placeholder="Nama">
-  <input id="wa" placeholder="WhatsApp">
-  <input id="paket" readonly placeholder="Paket">
-  <input id="harga" readonly placeholder="Harga">
+<!-- RESELLER -->
+<div class="panel reseller">
+  <div class="panel-header">
+    <span class="pop blue">⭐ RECOMMENDED</span>
+    <h2>Akses Reseller Panel</h2>
+    <h1>Rp 10.000</h1>
+  </div>
+
+  <div class="ram single" id="resList">
+    <div class="ram-box active">PERMANEN<br>Rp10.000</div>
+  </div>
+
+  <button onclick="kirimReseller()">🛒 Beli Reseller</button>
 </div>
 
 <div id="toast"></div>
