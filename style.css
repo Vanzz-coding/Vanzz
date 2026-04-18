@@ -1,137 +1,72 @@
 body{
-  margin:0;
   font-family:'Inter',sans-serif;
   background:#020617;
-  color:#e2e8f0;
-}
-
-/* HERO */
-.hero{
-  margin:15px;
-  padding:25px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  text-align:center;
-  box-shadow:0 0 40px rgba(59,130,246,0.2);
-}
-
-/* BADGE */
-.badge{
-  margin-top:10px;
-  padding:10px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#7c3aed,#9333ea);
-}
-
-/* REF */
-.ref{
-  margin:15px;
-  padding:15px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#064e3b,#022c22);
-}
-
-/* FITUR */
-.fitur{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  padding:10px;
-}
-
-.card{
-  padding:15px;
-  border-radius:20px;
-  background:#0f172a;
-  border:1px solid #1e293b;
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(59,130,246,0.4);
+  color:white;
+  margin:0;
 }
 
 /* PANEL */
 .panel{
-  margin:15px;
   padding:20px;
-  border-radius:25px;
-  background:#0f172a;
 }
 
-/* HEADER */
-.panel-header{
-  text-align:center;
-}
-
-.pop{
-  background:#ec4899;
-  padding:5px 10px;
-  border-radius:999px;
-}
-
-.pop.blue{
-  background:#3b82f6;
-}
-
-/* RAM */
 .ram{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:10px;
-  margin-top:15px;
-}
-
-.single{
-  grid-template-columns:1fr !important;
 }
 
 .ram-box{
-  padding:14px;
-  border-radius:15px;
-  background:#020617;
-  border:1px solid #1e293b;
+  padding:15px;
+  background:#0f172a;
+  border-radius:10px;
   text-align:center;
   cursor:pointer;
-  transition:.2s;
 }
 
 .ram-box:hover{
-  transform:translateY(-4px);
-  border-color:#3b82f6;
-  box-shadow:0 0 15px rgba(59,130,246,0.3);
-}
-
-.ram-box:active{
-  transform:scale(0.95);
+  background:#1e293b;
 }
 
 .active{
-  background:linear-gradient(135deg,#3b82f6,#6366f1);
-  box-shadow:0 0 20px rgba(59,130,246,0.6);
-  transform:scale(1.05);
-}
-
-.unli{
-  background:#111827;
+  background:#3b82f6;
 }
 
 /* BUTTON */
 button{
   width:100%;
   margin-top:15px;
-  padding:14px;
+  padding:12px;
   border:none;
-  border-radius:25px;
+  border-radius:15px;
   background:linear-gradient(90deg,#3b82f6,#9333ea);
   color:white;
-  font-weight:bold;
-  cursor:pointer;
 }
 
-button:active{
-  transform:scale(0.97);
+/* INVOICE */
+.invoice{
+  display:none;
+  padding:20px;
+}
+
+.inv-card{
+  background:#0f172a;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.qris{
+  width:200px;
+  display:block;
+  margin:15px auto;
+}
+
+.note{
+  text-align:center;
+  font-size:13px;
+  opacity:0.7;
 }
 
 /* TOAST */
@@ -141,25 +76,5 @@ button:active{
   right:20px;
   background:#22c55e;
   padding:10px;
-  border-radius:10px;
   display:none;
-  }
-
-#resList .ram-box{
-  font-size:16px;
-  font-weight:600;
-  padding:25px;
-}
-
-#resList .ram-box{
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* efek glow tetap */
-#resList .ram-box.active{
-  background: linear-gradient(135deg,#2563eb,#4f46e5);
-  box-shadow:0 0 25px rgba(59,130,246,0.8);
 }
