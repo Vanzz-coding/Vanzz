@@ -1,16 +1,31 @@
 const reff = new URLSearchParams(location.search).get("reffid") || "-"
 document.getElementById("reff").innerText = reff
 
-function pilih(el,p,h){
-  document.getElementById("paket").value=p
-  document.getElementById("harga").value="Rp "+h
+let pilihPanel = { paket:"5GB", harga:"1000" }
 
-  document.querySelectorAll(".ram-box").forEach(e=>e.classList.remove("active"))
-  el.classList.add("active")
+// PANEL CLICK
+document.querySelectorAll("#ramList .ram-box").forEach(el=>{
+  el.onclick = () => {
+    document.querySelectorAll("#ramList .ram-box").forEach(x=>x.classList.remove("active"))
+    el.classList.add("active")
 
-  toast("Pilih "+p)
-}
+    pilihPanel.paket = el.dataset.p
+    pilihPanel.harga = el.dataset.h
 
+    toast("Pilih " + el.dataset.p)
+  }
+})
+
+// RESELLER CLICK
+document.querySelectorAll("#resList .ram-box").forEach(el=>{
+  el.onclick = () => {
+    document.querySelectorAll("#resList .ram-box").forEach(x=>x.classList.remove("active"))
+    el.classList.add("active")
+    toast("Pilih Reseller")
+  }
+})
+
+// TOAST
 function toast(msg){
   let t=document.getElementById("toast")
   t.innerText=msg
@@ -18,15 +33,26 @@ function toast(msg){
   setTimeout(()=>t.style.display="none",2000)
 }
 
-function kirim(){
+// KIRIM PANEL
+function kirimPanel(){
   let admin="6285695344508"
 
   let text=`Order Panel
-Nama:${nama.value}
-WA:${wa.value}
-Paket:${paket.value}
-Harga:${harga.value}
-Reff:${reff}`
+Paket: ${pilihPanel.paket}
+Harga: Rp${pilihPanel.harga}
+Reff: ${reff}`
+
+  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
+}
+
+// KIRIM RESELLER
+function kirimReseller(){
+  let admin="6285695344508"
+
+  let text=`Order Reseller Panel
+Harga: Rp10.000
+Akses: Permanen
+Reff: ${reff}`
 
   window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
 }
