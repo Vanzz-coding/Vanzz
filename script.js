@@ -7,6 +7,16 @@ function pilih(paket, harga) {
   document.getElementById("form").scrollIntoView({ behavior: "smooth" })
 }
 
+function showPopup(text) {
+  let pop = document.getElementById("popup")
+  pop.innerText = text
+  pop.style.display = "block"
+
+  setTimeout(() => {
+    pop.style.display = "none"
+  }, 3000)
+}
+
 function kirim() {
   let nama = document.getElementById("nama").value
   let wa = document.getElementById("wa").value
@@ -14,9 +24,11 @@ function kirim() {
   let harga = document.getElementById("harga").value
 
   if (!nama || !wa || !paket) {
-    alert("Lengkapi data dulu!")
+    showPopup("Lengkapi data dulu!")
     return
   }
+
+  showPopup("Mengalihkan ke WhatsApp...")
 
   let admin = "6285695344508"
 
@@ -28,5 +40,7 @@ Paket: ${paket}
 Harga: ${harga}
 Referral: ${reff}`
 
-  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`)
+  setTimeout(() => {
+    window.open(`https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`)
+  }, 1000)
 }
