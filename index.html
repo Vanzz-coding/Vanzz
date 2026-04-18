@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Panel Store</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +21,7 @@
 
 <!-- REF -->
 <div class="ref">
-  🎁 Kode referral terdeteksi: <b id="reff">-</b><br>
+  🎁 Kode referral: <b id="reff">-</b><br>
   <small>Terimakasih telah berpartisipasi</small>
 </div>
 
@@ -25,10 +29,10 @@
 <h2 class="title">👑 Kenapa Pilih Kami?</h2>
 
 <div class="fitur">
-  <div class="card">⚡<br><b>Anti Delay & Lag</b><br><small>Server stabil 24/7</small></div>
-  <div class="card">🛡️<br><b>Keamanan Terjamin</b><br><small>Anti colong & intip</small></div>
+  <div class="card">⚡<br><b>Anti Delay</b><br><small>Server stabil</small></div>
+  <div class="card">🛡️<br><b>Aman</b><br><small>Anti colong</small></div>
   <div class="card">💾<br><b>Server Pribadi</b><br><small>Bukan shared</small></div>
-  <div class="card">💻<br><b>Full Support</b><br><small>Node.js v1-24</small></div>
+  <div class="card">💻<br><b>Full Support</b><br><small>Node.js</small></div>
 </div>
 
 <!-- PANEL -->
@@ -42,27 +46,31 @@
   </div>
 
   <div class="ram">
-    <div onclick="pilih('1GB','1000')" class="ram-box">1GB<br>Rp1.000</div>
-    <div onclick="pilih('2GB','1000')" class="ram-box">2GB<br>Rp1.000</div>
-    <div onclick="pilih('3GB','1000')" class="ram-box">3GB<br>Rp1.000</div>
-    <div onclick="pilih('4GB','1000')" class="ram-box">4GB<br>Rp1.000</div>
-    <div onclick="pilih('5GB','1000')" class="ram-box active">5GB<br>Rp1.000</div>
-    <div onclick="pilih('6GB','1000')" class="ram-box">6GB<br>Rp1.000</div>
-    <div onclick="pilih('7GB','1000')" class="ram-box">7GB<br>Rp1.000</div>
 
-    <div onclick="pilih('8GB','2000')" class="ram-box">8GB<br>Rp2.000</div>
-    <div onclick="pilih('9GB','3000')" class="ram-box">9GB<br>Rp3.000</div>
-    <div onclick="pilih('10GB','4000')" class="ram-box">10GB<br>Rp4.000</div>
+    <!-- 1-7 -->
+    <div class="ram-box" onclick="pilih(this,'1GB','1000')">1GB<br>Rp1.000</div>
+    <div class="ram-box" onclick="pilih(this,'2GB','1000')">2GB<br>Rp1.000</div>
+    <div class="ram-box" onclick="pilih(this,'3GB','1000')">3GB<br>Rp1.000</div>
+    <div class="ram-box" onclick="pilih(this,'4GB','1000')">4GB<br>Rp1.000</div>
+    <div class="ram-box active" onclick="pilih(this,'5GB','1000')">5GB<br>Rp1.000</div>
+    <div class="ram-box" onclick="pilih(this,'6GB','1000')">6GB<br>Rp1.000</div>
+    <div class="ram-box" onclick="pilih(this,'7GB','1000')">7GB<br>Rp1.000</div>
 
-    <div onclick="pilih('UNLI','5000')" class="ram-box unli">UNLIMITED<br>Rp5.000</div>
+    <!-- 8-10 -->
+    <div class="ram-box" onclick="pilih(this,'8GB','2000')">8GB<br>Rp2.000</div>
+    <div class="ram-box" onclick="pilih(this,'9GB','3000')">9GB<br>Rp3.000</div>
+    <div class="ram-box" onclick="pilih(this,'10GB','4000')">10GB<br>Rp4.000</div>
+
+    <!-- UNLI -->
+    <div class="ram-box unli" onclick="pilih(this,'UNLI','5000')">UNLI<br>Rp5.000</div>
+
   </div>
 
   <ul class="list">
     <li>✔ Anti lag & anti limit</li>
-    <li>✔ Cocok bot berat / multi-device</li>
-    <li>✔ Aktif full 30 hari</li>
-    <li>✔ Support Node.js v1-24</li>
-    <li>✔ Garansi 15 hari</li>
+    <li>✔ Cocok bot berat</li>
+    <li>✔ Aktif 30 hari</li>
+    <li>✔ Support Node.js</li>
   </ul>
 
   <button onclick="kirim()">🛒 Beli Sekarang</button>
