@@ -6,9 +6,9 @@ body {
 }
 
 .navbar {
-  padding: 15px;
   text-align: center;
-  background: rgba(30,41,59,0.8);
+  padding: 15px;
+  background: rgba(30,41,59,0.7);
   backdrop-filter: blur(10px);
 }
 
@@ -21,11 +21,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   margin: 40px;
+  flex-wrap: wrap;
 }
 
 .card {
+  position: relative;
   background: #1e293b;
   padding: 20px;
   width: 140px;
@@ -33,26 +34,26 @@ body {
   text-align: center;
   transition: 0.3s;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #22c55e;
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #22c55e;
 }
 
-.card.best {
+.best {
   border: 2px solid #22c55e;
 }
 
-.card h3 {
-  margin: 0;
-}
-
-.card span {
-  display: block;
-  margin: 10px 0;
-  font-size: 18px;
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #22c55e;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 12px;
 }
 
 .card button {
@@ -61,12 +62,10 @@ body {
   padding: 8px 12px;
   color: white;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .form {
   text-align: center;
-  margin-top: 30px;
 }
 
 input {
@@ -86,11 +85,30 @@ button {
   padding: 12px 20px;
   color: white;
   border-radius: 8px;
-  cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  margin: 30px;
-  opacity: 0.6;
+/* ANIMASI */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
 }
