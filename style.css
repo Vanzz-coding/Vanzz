@@ -1,40 +1,86 @@
 body{
   font-family:'Inter',sans-serif;
   background:#020617;
-  color:white;
+  color:#e2e8f0;
   margin:0;
 }
 
+/* PANEL */
 .panel{
+  margin:15px;
   padding:20px;
+  border-radius:25px;
+  background:#0f172a;
 }
 
+/* HEADER */
+.panel-header{
+  text-align:center;
+}
+
+.pop{
+  background:#ec4899;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+}
+
+.pop.blue{
+  background:#3b82f6;
+}
+
+/* RAM */
 .ram{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:10px;
+  margin-top:15px;
 }
 
 .ram-box{
-  padding:15px;
-  background:#0f172a;
-  border-radius:10px;
+  padding:14px;
+  border-radius:15px;
+  background:#020617;
+  border:1px solid #1e293b;
   text-align:center;
   cursor:pointer;
+  transition:.2s;
+}
+
+.ram-box:hover{
+  transform:translateY(-4px);
+  border-color:#3b82f6;
 }
 
 .active{
-  background:#3b82f6;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
 }
 
+/* BUTTON */
 button{
   width:100%;
   margin-top:15px;
-  padding:12px;
+  padding:14px;
   border:none;
-  border-radius:15px;
+  border-radius:25px;
   background:linear-gradient(90deg,#3b82f6,#9333ea);
   color:white;
+  font-weight:bold;
+}
+
+/* RESELLER */
+.reseller{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  box-shadow:0 0 25px rgba(59,130,246,0.2);
+}
+
+.res-list{
+  margin-top:15px;
+  font-size:14px;
+}
+
+.btn-res{
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
 }
 
 /* INVOICE */
@@ -44,20 +90,34 @@ button{
 }
 
 .inv-card{
-  background:#0f172a;
+  background:#020617;
   padding:20px;
   border-radius:20px;
   text-align:center;
 }
 
+/* QRIS */
 .qris{
-  width:200px;
-  display:block;
+  width:180px;
   margin:15px auto;
+  display:block;
+  cursor:pointer;
 }
 
-.login{
+/* MODAL */
+#qrisModal{
   display:none;
-  padding:20px;
-  text-align:center;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  top:0;
+  left:0;
+  justify-content:center;
+  align-items:center;
+}
+
+#qrisModal img{
+  width:80%;
+  max-width:400px;
 }
