@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Panel Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,64 +10,56 @@
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>⚡ PTERODACTYL PANEL</h1>
-  <p>Full Akses Panel — Modal Receh, Untung Ga Receh!</p>
-  <div class="badge">🛡️ Server Milik Admin Sendiri • 99.9% Uptime</div>
-</div>
-
-<!-- REF -->
-<div class="ref">
-  🎁 Referral: <b id="reff">-</b>
-</div>
-
-<!-- FITUR -->
-<h2 class="title">👑 Kenapa Pilih Kami?</h2>
-
-<div class="fitur">
-  <div class="card">⚡<br>Anti Delay</div>
-  <div class="card">🛡️<br>Aman</div>
-  <div class="card">💾<br>Server Pribadi</div>
-  <div class="card">💻<br>Full Support</div>
-</div>
-
 <!-- PANEL -->
 <div class="panel">
-  <div class="panel-header">
-    <span class="pop">🔥 POPULAR</span>
-    <h2>Panel RAM Options</h2>
-    <h1>Rp 1.000</h1>
-  </div>
+  <h2>Pilih Panel</h2>
 
   <div class="ram" id="ramList">
-    <div class="ram-box" data-p="1GB" data-h="1000">1GB<br>Rp1.000</div>
+
+    <!-- 1-7 = 1K -->
+    <div class="ram-box active" data-p="1GB" data-h="1000">1GB<br>Rp1.000</div>
     <div class="ram-box" data-p="2GB" data-h="1000">2GB<br>Rp1.000</div>
     <div class="ram-box" data-p="3GB" data-h="1000">3GB<br>Rp1.000</div>
     <div class="ram-box" data-p="4GB" data-h="1000">4GB<br>Rp1.000</div>
-    <div class="ram-box active" data-p="5GB" data-h="1000">5GB<br>Rp1.000</div>
+    <div class="ram-box" data-p="5GB" data-h="1000">5GB<br>Rp1.000</div>
     <div class="ram-box" data-p="6GB" data-h="1000">6GB<br>Rp1.000</div>
     <div class="ram-box" data-p="7GB" data-h="1000">7GB<br>Rp1.000</div>
 
+    <!-- 8-10 -->
     <div class="ram-box" data-p="8GB" data-h="2000">8GB<br>Rp2.000</div>
     <div class="ram-box" data-p="9GB" data-h="3000">9GB<br>Rp3.000</div>
     <div class="ram-box" data-p="10GB" data-h="4000">10GB<br>Rp4.000</div>
 
-    <div class="ram-box unli" data-p="UNLI" data-h="5000">UNLI<br>Rp5.000</div>
+    <!-- UNLI -->
+    <div class="ram-box" data-p="UNLI" data-h="5000">UNLI<br>Rp5.000</div>
+
   </div>
 
-  <button onclick="kirimPanel()">🛒 Beli Panel</button>
+  <button onclick="buatInvoice()">🛒 Beli Sekarang</button>
 </div>
 
-<!-- RESELLER -->
-<div class="panel reseller">
-  <div class="panel-header">
-    <span class="pop blue">⭐ RECOMMENDED</span>
-    <h2>Akses Reseller Panel</h2>
-    <h1>Rp 10.000</h1>
+<!-- INVOICE -->
+<div class="invoice" id="invoiceBox">
+
+  <h2>🧾 Invoice Pembayaran</h2>
+
+  <div class="inv-card">
+    <p>ID Transaksi</p>
+    <h3 id="invId">-</h3>
+
+    <p>Paket</p>
+    <h3 id="invPaket">-</h3>
+
+    <p>Total</p>
+    <h1 id="invHarga">Rp0</h1>
   </div>
 
-  <button onclick="kirimReseller()">🛒 Beli Reseller</button>
+  <img src="qris.png" class="qris">
+
+  <p class="note">Scan QRIS lalu transfer sesuai nominal</p>
+
+  <button onclick="kirimBukti()">📤 Kirim Bukti Transfer</button>
+
 </div>
 
 <div id="toast"></div>
