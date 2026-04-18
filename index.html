@@ -3,48 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beli Panel</title>
+<title>Panel Store</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>PANEL STORE</h1>
-  <p>Panel Murah & Berkualitas</p>
+<header class="navbar">
+  <h1>VANX PANEL</h1>
 </header>
+
+<section class="hero">
+  <h2>Beli Panel Murah & Cepat</h2>
+  <p>Proses cepat, kualitas terbaik ⚡</p>
+</section>
 
 <section class="container">
 
   <div class="card" onclick="pilih('1GB','1000')">
-    <h2>1GB</h2>
-    <p>Rp1.000</p>
+    <h3>1GB</h3>
+    <span>Rp1.000</span>
+    <button>Beli</button>
   </div>
 
   <div class="card" onclick="pilih('2GB','2000')">
-    <h2>2GB</h2>
-    <p>Rp2.000</p>
+    <h3>2GB</h3>
+    <span>Rp2.000</span>
+    <button>Beli</button>
   </div>
 
-  <div class="card" onclick="pilih('UNLI','5000')">
-    <h2>UNLI</h2>
-    <p>Rp5.000</p>
+  <div class="card best" onclick="pilih('UNLI','5000')">
+    <h3>UNLI</h3>
+    <span>Rp5.000</span>
+    <button>Paling Laris</button>
   </div>
 
 </section>
 
 <section class="form" id="form">
-  <h2>Order Panel</h2>
+  <h2>Form Order</h2>
 
   <input type="text" id="nama" placeholder="Nama">
   <input type="text" id="wa" placeholder="Nomor WhatsApp">
-  <input type="text" id="paket" placeholder="Paket" readonly>
-  <input type="text" id="harga" placeholder="Harga" readonly>
+  <input type="text" id="paket" readonly placeholder="Paket">
+  <input type="text" id="harga" readonly placeholder="Harga">
 
   <button onclick="kirim()">Order Sekarang</button>
 </section>
 
 <footer>
-  <p>© Panel Store</p>
+  <p>© VANX PANEL</p>
 </footer>
 
 <script src="script.js"></script>
