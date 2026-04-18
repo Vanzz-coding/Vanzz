@@ -1,7 +1,11 @@
+// ambil reff dari URL
+const urlParams = new URLSearchParams(window.location.search)
+const reff = urlParams.get("reffid") || "tidak ada"
+
 function pilih(paket, harga) {
   document.getElementById("paket").value = paket;
   document.getElementById("harga").value = "Rp " + harga;
-  document.getElementById("formOrder").scrollIntoView();
+  document.getElementById("form").scrollIntoView({ behavior: "smooth" });
 }
 
 function kirim() {
@@ -10,7 +14,22 @@ function kirim() {
   let paket = document.getElementById("paket").value;
   let harga = document.getElementById("harga").value;
 
-  let pesan = `Halo Admin, saya ingin order panel\n\nNama: ${nama}\nWA: ${wa}\nPaket: ${paket}\nHarga: ${harga}`;
+  if (!nama || !wa || !paket) {
+    alert("Isi semua data!");
+    return;
+  }
 
-  window.open(`https://wa.me/62XXXXXXXXXX?text=${encodeURIComponent(pesan)}`);
+  let admin = "62XXXXXXXXXX"; // GANTI NOMOR KAMU
+
+  let pesan = `Halo Admin, saya ingin order panel
+
+Nama: ${nama}
+No WA: ${wa}
+Paket: ${paket}
+Harga: ${harga}
+Referral: ${reff}
+
+Mohon diproses 🙏`;
+
+  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`);
 }
