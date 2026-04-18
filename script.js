@@ -18,7 +18,7 @@ function kirim() {
     return
   }
 
-  let admin = "62XXXXXXXXXX"
+  let admin = "6285695344508"
 
   let pesan = `Halo Admin, saya ingin order panel
 
