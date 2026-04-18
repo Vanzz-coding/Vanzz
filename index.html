@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Beli Panel - VANX</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beli Panel</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>VANX PANEL</h1>
-  <p>Panel Murah & Auto Create</p>
+  <h1>PANEL STORE</h1>
+  <p>Panel Murah & Berkualitas</p>
 </header>
 
-<section class="produk">
-  <h2>Pilih Paket Panel</h2>
+<section class="container">
 
-  <div class="card">
-    <h3>1GB</h3>
-    <p>Rp 1.000</p>
-    <button onclick="pilih('1GB','1000')">Beli</button>
+  <div class="card" onclick="pilih('1GB','1000')">
+    <h2>1GB</h2>
+    <p>Rp1.000</p>
   </div>
 
-  <div class="card">
-    <h3>2GB</h3>
-    <p>Rp 2.000</p>
-    <button onclick="pilih('2GB','2000')">Beli</button>
+  <div class="card" onclick="pilih('2GB','2000')">
+    <h2>2GB</h2>
+    <p>Rp2.000</p>
   </div>
 
-  <div class="card">
-    <h3>UNLI</h3>
-    <p>Rp 5.000</p>
-    <button onclick="pilih('UNLI','5000')">Beli</button>
+  <div class="card" onclick="pilih('UNLI','5000')">
+    <h2>UNLI</h2>
+    <p>Rp5.000</p>
   </div>
 
 </section>
 
-<section class="form" id="formOrder">
+<section class="form" id="form">
   <h2>Order Panel</h2>
+
   <input type="text" id="nama" placeholder="Nama">
   <input type="text" id="wa" placeholder="Nomor WhatsApp">
-  <input type="text" id="paket" readonly placeholder="Paket">
-  <input type="text" id="harga" readonly placeholder="Harga">
+  <input type="text" id="paket" placeholder="Paket" readonly>
+  <input type="text" id="harga" placeholder="Harga" readonly>
 
   <button onclick="kirim()">Order Sekarang</button>
 </section>
 
 <footer>
-  <p>© VANX PANEL</p>
+  <p>© Panel Store</p>
 </footer>
 
 <script src="script.js"></script>
