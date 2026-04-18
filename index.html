@@ -12,10 +12,13 @@
 
 <!-- PANEL -->
 <div class="panel">
-  <h2>Pilih Panel</h2>
+  <div class="panel-header">
+    <span class="pop">🔥 POPULAR</span>
+    <h2>Panel RAM Options</h2>
+    <h1>Rp 1.000</h1>
+  </div>
 
   <div class="ram" id="ramList">
-
     <!-- 1-7 -->
     <div class="ram-box active" data-p="1GB" data-h="1000">1GB<br>Rp1.000</div>
     <div class="ram-box" data-p="2GB" data-h="1000">2GB<br>Rp1.000</div>
@@ -32,23 +35,31 @@
 
     <!-- UNLI -->
     <div class="ram-box" data-p="UNLI" data-h="5000">UNLI<br>Rp5.000</div>
-
   </div>
 
   <button onclick="buatInvoice()">🛒 Beli Panel</button>
 </div>
 
-<!-- RESELLER -->
-<div class="panel">
-  <h2>Reseller Panel</h2>
-  <p>Harga: Rp10.000</p>
+<!-- RESELLER PREMIUM -->
+<div class="panel reseller">
+  <div class="panel-header">
+    <span class="pop blue">⭐ RECOMMENDED</span>
+    <h2>Akses Reseller Panel</h2>
+    <h1>Rp 10.000</h1>
+  </div>
 
-  <button onclick="beliReseller()">💼 Beli Reseller</button>
+  <ul class="res-list">
+    <li>✔ Bisa jual panel sendiri</li>
+    <li>✔ Harga lebih murah</li>
+    <li>✔ Full support admin</li>
+    <li>✔ Akses panel full</li>
+  </ul>
+
+  <button class="btn-res" onclick="beliReseller()">🚀 Daftar Reseller</button>
 </div>
 
 <!-- INVOICE -->
 <div class="invoice" id="invoiceBox">
-
   <h2>🧾 Invoice</h2>
 
   <div class="inv-card">
@@ -62,25 +73,17 @@
     <h1 id="invHarga">Rp0</h1>
   </div>
 
-  <img src="qris.png" class="qris">
+  <!-- QRIS -->
+  <img src="qris.png" class="qris" onclick="zoomQR()">
 
-  <p class="note">Scan QRIS lalu bayar</p>
+  <!-- MODAL -->
+  <div id="qrisModal" onclick="closeQR()">
+    <img src="qris.png">
+  </div>
 
-  <button onclick="selesaiBayar()">✅ Saya Sudah Bayar</button>
+  <p class="note">Klik QRIS untuk perbesar</p>
 
-</div>
-
-<!-- LOGIN -->
-<div class="login" id="loginBox">
-  <h2>🎉 Panel Berhasil Dibuat</h2>
-
-  <p>Username</p>
-  <h3 id="logUser">-</h3>
-
-  <p>Password</p>
-  <h3 id="logPass">-</h3>
-
-  <small>Login: https://panelmu.com</small>
+  <button onclick="kirimBukti()">📤 Kirim Bukti Transfer</button>
 </div>
 
 <script src="script.js"></script>
