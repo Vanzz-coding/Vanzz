@@ -3,64 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VANX PANEL</title>
+<title>Panel Store</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">VANX PANEL</div>
-  <a href="#pricing" class="nav-btn">Order</a>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <h1>⚡ PTERODACTYL PANEL</h1>
+  <p>Full Akses Panel — Modal Receh, Untung Ga Receh!</p>
 
-<section class="hero">
-  <h1>Panel Murah & Stabil ⚡</h1>
-  <p>Deploy cepat • Anti lemot • Harga pelajar</p>
-  <a href="#pricing" class="cta">Lihat Paket</a>
-</section>
-
-<section class="features">
-  <div>⚡ Server Cepat</div>
-  <div>🔒 Anti Suspend</div>
-  <div>📱 Support 24 Jam</div>
-</section>
-
-<section id="pricing" class="pricing">
-
-<!-- 1-7 -->
-<div class="box" onclick="pilih('1GB','1000')"><h3>1GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('2GB','1000')"><h3>2GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('3GB','1000')"><h3>3GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('4GB','1000')"><h3>4GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('5GB','1000')"><h3>5GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('6GB','1000')"><h3>6GB</h3><p>Rp1K</p></div>
-<div class="box" onclick="pilih('7GB','1000')"><h3>7GB</h3><p>Rp1K</p></div>
-
-<!-- 8-10 -->
-<div class="box mid" onclick="pilih('8GB','2000')"><h3>8GB</h3><p>Rp2K</p></div>
-<div class="box mid" onclick="pilih('9GB','3000')"><h3>9GB</h3><p>Rp3K</p></div>
-<div class="box mid" onclick="pilih('10GB','4000')"><h3>10GB</h3><p>Rp4K</p></div>
-
-<!-- UNLI -->
-<div class="box best" onclick="pilih('UNLI','5000')">
-  <span class="badge">BEST</span>
-  <h3>UNLI</h3>
-  <p>Rp5K</p>
+  <div class="badge">
+    🛡️ Server Milik Admin Sendiri • 99.9% Uptime
+  </div>
 </div>
 
-</section>
+<!-- REF -->
+<div class="ref">
+  🎁 Kode referral terdeteksi: <b id="reff">-</b>
+</div>
 
-<section class="form" id="form">
-  <h2>Order Sekarang</h2>
+<!-- FITUR -->
+<h2 class="title">Kenapa Pilih Kami?</h2>
+
+<div class="fitur">
+  <div class="card">⚡ Anti Delay</div>
+  <div class="card">🔒 Aman</div>
+  <div class="card">💻 Server Pribadi</div>
+  <div class="card">🛠️ Full Support</div>
+</div>
+
+<!-- PANEL -->
+<div class="panel">
+
+  <div class="panel-header">
+    <h2>Panel RAM Options</h2>
+    <span class="pop">🔥 POPULAR</span>
+    <h1>Rp 1.000</h1>
+    <p>Mulai dari</p>
+  </div>
+
+  <div class="ram">
+    <div onclick="pilih('1GB','1000')" class="ram-box">1GB<br>Rp1.000</div>
+    <div onclick="pilih('2GB','1000')" class="ram-box">2GB<br>Rp1.000</div>
+    <div onclick="pilih('3GB','1000')" class="ram-box">3GB<br>Rp1.000</div>
+    <div onclick="pilih('4GB','1000')" class="ram-box">4GB<br>Rp1.000</div>
+    <div onclick="pilih('5GB','1000')" class="ram-box">5GB<br>Rp1.000</div>
+    <div onclick="pilih('6GB','1000')" class="ram-box">6GB<br>Rp1.000</div>
+    <div onclick="pilih('7GB','1000')" class="ram-box">7GB<br>Rp1.000</div>
+
+    <div onclick="pilih('8GB','2000')" class="ram-box">8GB<br>Rp2.000</div>
+    <div onclick="pilih('9GB','3000')" class="ram-box">9GB<br>Rp3.000</div>
+    <div onclick="pilih('10GB','4000')" class="ram-box">10GB<br>Rp4.000</div>
+
+    <div onclick="pilih('UNLI','5000')" class="ram-box active">
+      UNLI<br>Rp5.000
+    </div>
+  </div>
+
+  <ul class="list">
+    <li>✔ Anti lag & anti limit</li>
+    <li>✔ Cocok bot berat</li>
+    <li>✔ Aktif 30 hari</li>
+    <li>✔ Support Node.js</li>
+  </ul>
+
+  <button onclick="kirim()">🛒 Beli Sekarang</button>
+
+</div>
+
+<!-- FORM -->
+<div class="form" id="form">
   <input id="nama" placeholder="Nama">
   <input id="wa" placeholder="WhatsApp">
   <input id="paket" readonly placeholder="Paket">
   <input id="harga" readonly placeholder="Harga">
-  <button onclick="kirim()">Order via WhatsApp</button>
-</section>
+</div>
 
 <div id="toast"></div>
-<div id="live"></div>
 
 <script src="script.js"></script>
 </body>
