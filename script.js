@@ -1,58 +1,40 @@
-const reff = new URLSearchParams(location.search).get("reffid") || "-"
-document.getElementById("reff").innerText = reff
+let pilih = { paket:"1GB", harga:"1000" }
 
-let pilihPanel = { paket:"5GB", harga:"1000" }
-
-// PANEL CLICK
-document.querySelectorAll("#ramList .ram-box").forEach(el=>{
+// PILIH RAM
+document.querySelectorAll(".ram-box").forEach(el=>{
   el.onclick = () => {
-    document.querySelectorAll("#ramList .ram-box").forEach(x=>x.classList.remove("active"))
+    document.querySelectorAll(".ram-box").forEach(x=>x.classList.remove("active"))
     el.classList.add("active")
 
-    pilihPanel.paket = el.dataset.p
-    pilihPanel.harga = el.dataset.h
-
-    toast("Pilih " + el.dataset.p)
+    pilih.paket = el.dataset.p
+    pilih.harga = el.dataset.h
   }
 })
 
-// RESELLER CLICK
-document.querySelectorAll("#resList .ram-box").forEach(el=>{
-  el.onclick = () => {
-    document.querySelectorAll("#resList .ram-box").forEach(x=>x.classList.remove("active"))
-    el.classList.add("active")
-    toast("Pilih Reseller")
-  }
-})
+// BUAT INVOICE
+function buatInvoice(){
+  let id = "INV"+Math.floor(Math.random()*999999)
 
-// TOAST
-function toast(msg){
-  let t=document.getElementById("toast")
-  t.innerText=msg
-  t.style.display="block"
-  setTimeout(()=>t.style.display="none",2000)
+  document.getElementById("invoiceBox").style.display="block"
+
+  document.getElementById("invId").innerText=id
+  document.getElementById("invPaket").innerText=pilih.paket
+  document.getElementById("invHarga").innerText="Rp "+pilih.harga
+
+  window.scrollTo(0,document.body.scrollHeight)
 }
 
-// KIRIM PANEL
-function kirimPanel(){
+// KIRIM BUKTI
+function kirimBukti(){
   let admin="6285695344508"
 
-  let text=`Order Panel
-Paket: ${pilihPanel.paket}
-Harga: Rp${pilihPanel.harga}
-Reff: ${reff}`
+  let text=`Bukti Transfer
 
-  window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
-}
+ID: ${invId.innerText}
+Paket: ${invPaket.innerText}
+Harga: ${invHarga.innerText}
 
-// KIRIM RESELLER
-function kirimReseller(){
-  let admin="6285695344508"
-
-  let text=`Order Reseller Panel
-Harga: Rp10.000
-Akses: Permanen
-Reff: ${reff}`
+Saya sudah transfer`
 
   window.open(`https://wa.me/${admin}?text=${encodeURIComponent(text)}`)
 }
